@@ -18,31 +18,40 @@
     <aside id="sidebarView">
         <div class="sidebar-brand">
             <img src="../../devosuitlogo.png" alt="Devosuit Logo" class="sidebar-logo">
-            <span class="sidebar-title">Devosuit Portal</span>
+            <div class="sidebar-brand-text">
+                <span class="sidebar-title">Devosuit</span>
+                <span class="sidebar-subtitle">DERS PORTALI</span>
+            </div>
         </div>
 
-        <a href="../../index.html" class="back-to-dashboard-btn">
-            <i class="fas fa-arrow-left"></i> Ders Seçimine Dön
-        </a>
+        <div class="sidebar-scroll-area">
+            <a href="../../index.html" class="back-to-dashboard-btn">
+                <i class="fas fa-arrow-left"></i> Ders Seçimine Dön
+            </a>
 
-        <ul class="nav-links">
-            <li><a href="#derse-giris" class="active"><i class="fas fa-sign-in-alt"></i> 1. Giriş &amp; Yapıtaşları</a></li>
-            <li><a href="#mimari-dusunme"       ><i class="fas fa-brain"></i>      2. Mimari Düşünme</a></li>
-            <li><a href="#modulerlik"            ><i class="fas fa-cubes"></i>      3. Modüler Tasarım</a></li>
-            <li><a href="#mimari-karakteristikler"><i class="fas fa-shield-alt"></i> 4. Kalite Öznitelikleri</a></li>
-            <li><a href="#olcmeyi-yonetme"       ><i class="fas fa-chart-line"></i> 5. Metrikler &amp; Fitness</a></li>
-            <li><a href="#bilesen-tabanli"       ><i class="fas fa-project-diagram"></i> 6. Bileşen Tasarımı</a></li>
-            <li><a href="#mimari-stiller"        ><i class="fas fa-drafting-compass"></i> 7. Mimari Stiller</a></li>
-            <li class="nav-divider">
-                <a href="#exam-simulator" class="nav-special-link">
-                    <i class="fas fa-file-signature"></i> 100 Soru Simülatör
-                </a>
-            </li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="#derse-giris" class="active"><i class="fas fa-sign-in-alt"></i> 1. Giriş &amp; Yapıtaşları</a></li>
+                <li><a href="#mimari-dusunme"       ><i class="fas fa-brain"></i>      2. Mimari Düşünme</a></li>
+                <li><a href="#modulerlik"            ><i class="fas fa-cubes"></i>      3. Modüler Tasarım</a></li>
+                <li><a href="#mimari-karakteristikler"><i class="fas fa-shield-alt"></i> 4. Kalite Öznitelikleri</a></li>
+                <li><a href="#olcmeyi-yonetme"       ><i class="fas fa-chart-line"></i> 5. Metrikler &amp; Fitness</a></li>
+                <li><a href="#bilesen-tabanli"       ><i class="fas fa-project-diagram"></i> 6. Bileşen Tasarımı</a></li>
+                <li><a href="#mimari-stiller"        ><i class="fas fa-drafting-compass"></i> 7. Mimari Stiller</a></li>
+                <li class="nav-divider">
+                    <a href="#exam-simulator" class="nav-special-link">
+                        <i class="fas fa-file-signature"></i> 100 Soru Simülatör
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-        <button class="theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i> <span>Karanlık Mod</span>
-        </button>
+        <div class="sidebar-footer">
+            <button class="footer-link-btn" id="settingsBtn"><i class="fas fa-cog"></i> Ayarlar</button>
+            <button class="footer-link-btn" id="supportBtn"><i class="far fa-life-ring"></i> Destek</button>
+            <button class="theme-toggle dashboard-theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i> <span>Karanlık Mod</span>
+            </button>
+        </div>
     </aside>
 
     <!-- ─── Workspace ───────────────────────────────────────────────── -->
@@ -63,6 +72,11 @@
         </header>
 
         <div id="projectsContainer"></div>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer-bar">
+            <p>Created by <a href="https://devosuit.com" target="_blank">devosuit</a></p>
+        </footer>
     </main>
 
     <!-- ─── Engine ──────────────────────────────────────────────────── -->
@@ -88,6 +102,16 @@
     <script src="js/quiz.js"></script>
     <script src="js/mini-quiz.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- Custom alert overlay -->
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-box">
+            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+            <h3 id="alertTitle">Bilgi</h3>
+            <p id="alertMessage">Bu özellik çok yakında aktif olacaktır.</p>
+            <button class="alert-close-btn" onclick="closeAlert()">Tamam</button>
+        </div>
+    </div>
 
 </body>
 </html>

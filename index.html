@@ -6,64 +6,145 @@
     <title>Devosuit Ders Portalı</title>
     <meta name="description" content="Kişisel üniversite ders notları, kod analizleri ve sınav simülatörü platformu.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="dashboard-page">
 
-    <div class="dashboard-view">
-        <header class="dashboard-header">
-            <div class="logo-area">
-                <img src="devosuitlogo.png" alt="Devosuit Logo" class="dashboard-logo">
-                <h1>Devosuit Ders Portalı</h1>
+    <!-- ─── Sidebar ──────────────────────────────────────────────────── -->
+    <aside id="sidebarView">
+        <div class="sidebar-brand">
+            <img src="devosuitlogo.png" alt="Devosuit Logo" class="sidebar-logo">
+            <div class="sidebar-brand-text">
+                <span class="sidebar-title">Devosuit</span>
+                <span class="sidebar-subtitle">DERS PORTALI</span>
             </div>
-            <p>Üniversite ders projeleri, kaynak kod analizleri, konu sonu pratik testleri ve genel sınav simülasyonları içeren kişisel ders portalı.</p>
-        </header>
-
-        <div class="course-grid">
-
-            <!-- Mobil Programlama — AKTİF -->
-            <a href="courses/mobil/index.html" class="course-card active">
-                <span class="card-badge">Aktif Ders</span>
-                <div class="course-icon"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Mobil Programlama &amp; İşletim Sistemleri</h3>
-                <p>Android (Java), Flutter (Dart) ve MAUI Blazor Hybrid ile mobil uygulama geliştirme teorisi, line-by-line kod analizleri ve 100+ soru bankası.</p>
-                <span class="enter-btn">Derse Başla <i class="fas fa-arrow-right"></i></span>
-            </a>
-
-            <!-- Yazılım Mimarisi — AKTİF -->
-            <a href="courses/yazilim-mimarisi/index.html" class="course-card active">
-                <span class="card-badge">Aktif Ders</span>
-                <div class="course-icon"><i class="fas fa-drafting-compass"></i></div>
-                <h3>Yazılım Mimarisi</h3>
-                <p>Tasarım desenleri, SOLID prensipleri, mimari stiller ve yazılım mühendisliği teorisi üzerine detaylı ders notları.</p>
-                <span class="enter-btn">Derse Başla <i class="fas fa-arrow-right"></i></span>
-            </a>
-
-            <!-- Veritabanı — Kilitli -->
-            <div class="course-card locked">
-                <span class="card-badge locked-badge">Çok Yakında</span>
-                <div class="course-icon"><i class="fas fa-database"></i></div>
-                <h3>Veritabanı Yönetim Sistemleri</h3>
-                <p>İlişkisel veritabanı teorisi, normalizasyon kuralları, SQL sorgu analizleri ve veri tabanı yönetim sistemleri ders çalışma notları.</p>
-                <span class="enter-btn">Kilitli</span>
-            </div>
-
-            <!-- Ağlar — Kilitli -->
-            <div class="course-card locked">
-                <span class="card-badge locked-badge">Çok Yakında</span>
-                <div class="course-icon"><i class="fas fa-network-wired"></i></div>
-                <h3>Bilgisayar Ağları</h3>
-                <p>OSI ve TCP/IP referans modelleri, alt ağlara bölme (subnetting), IP adresleri ve yönlendirme protokolleri laboratuvar çalışmaları.</p>
-                <span class="enter-btn">Kilitli</span>
-            </div>
-
         </div>
 
-        <button class="theme-toggle dashboard-theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i> <span>Karanlık Mod</span>
-        </button>
+        <div class="sidebar-scroll-area">
+            <ul class="nav-links">
+                <li><a href="#" class="active" id="tab-courses"><i class="fas fa-book-open"></i> Dersler</a></li>
+                <li><a href="#" id="tab-notes"><i class="far fa-sticky-note"></i> Notlar</a></li>
+                <li><a href="#" id="tab-quizzes"><i class="far fa-question-circle"></i> Sınavlar</a></li>
+                <li><a href="#" id="tab-archive"><i class="fas fa-archive"></i> Arşiv</a></li>
+            </ul>
+
+            <button class="new-session-btn" id="newSessionBtn">
+                <i class="fas fa-plus"></i> Yeni Çalışma Seansı
+            </button>
+        </div>
+
+        <div class="sidebar-footer">
+            <button class="footer-link-btn" id="settingsBtn"><i class="fas fa-cog"></i> Ayarlar</button>
+            <button class="footer-link-btn" id="supportBtn"><i class="far fa-life-ring"></i> Destek</button>
+            <button class="theme-toggle dashboard-theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i> <span>Karanlık Mod</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- ─── Main Content Area ───────────────────────────────────────── -->
+    <main id="mainWorkspace" class="dashboard-main">
+        <!-- Top bar -->
+        <header class="top-bar">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search-input" id="dashboardSearchInput" placeholder="Kütüphanede ara..." oninput="filterDashboardCourses()">
+            </div>
+        </header>
+
+        <!-- Main Dashboard Wrapper -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-title-area">
+                <h1>Derslerim</h1>
+                <div class="dashboard-meta">
+                    <span><i class="far fa-calendar-alt"></i> GÜNCELLEME: 12 EKİM</span>
+                    <span class="meta-dot">•</span>
+                    <span><i class="fas fa-book-open"></i> 2 AKTİF DERS</span>
+                </div>
+            </div>
+
+            <!-- Course Grid -->
+            <div class="course-grid dashboard-grid">
+
+                <!-- Mobil Programlama — AKTİF -->
+                <a href="courses/mobil/index.html" class="course-card active-card" data-title="Mobil Programlama & İşletim Sistemleri" data-category="active">
+                    <div class="card-bg-container">
+                        <img src="assets/images/mobil_programlama_bg.png" alt="" class="card-bg-image">
+                        <div class="card-bg-overlay"></div>
+                    </div>
+                    <span class="card-badge badge-advanced">İLERİ SEVİYE</span>
+                    <div class="card-content">
+                        <h3>Mobil Programlama &amp; İşletim Sistemleri</h3>
+                        <p>Android (Java), Flutter (Dart) ve MAUI Blazor Hybrid ile mobil uygulama geliştirme teorisi, line-by-line kod analizleri ve 100+ soru bankası.</p>
+                        <div class="card-footer">
+                            <span class="last-mod"><i class="far fa-clock"></i> SON GÜNCELLEME: 2 SAAT ÖNCE</span>
+                            <span class="footer-trend-icon trend-purple"><i class="fas fa-chart-line"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Yazılım Mimarisi — AKTİF -->
+                <a href="courses/yazilim-mimarisi/index.html" class="course-card active-card" data-title="Yazılım Mimarisi" data-category="active">
+                    <div class="card-bg-container">
+                        <img src="assets/images/yazilim_mimarisi_bg.png" alt="" class="card-bg-image">
+                        <div class="card-bg-overlay"></div>
+                    </div>
+                    <span class="card-badge badge-theory">TEORİ</span>
+                    <div class="card-content">
+                        <h3>Yazılım Mimarisi</h3>
+                        <p>Tasarım desenleri, SOLID prensipleri, mimari stiller ve yazılım mühendisliği teorisi üzerine detaylı ders notları.</p>
+                        <div class="card-footer">
+                            <span class="last-mod"><i class="far fa-clock"></i> SON GÜNCELLEME: 15 DK ÖNCE</span>
+                            <span class="footer-trend-icon trend-blue"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Add to your library dashed card -->
+                <div class="course-card add-library-card" id="addLibraryCardBtn">
+                    <div class="add-library-inner">
+                        <div class="add-icon-container">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <h3>Kütüphanene Ekle</h3>
+                        <p>Devosuit ağından yeni dersleri keşfedin veya kendi çalışma alanınızı yaratın.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Floating Action Bar -->
+        <div class="floating-action-bar">
+            <button class="fab-btn" title="Zamanlayıcıyı Başlat" id="fabTimer"><i class="far fa-clock"></i></button>
+            <div class="fab-divider"></div>
+            <button class="fab-btn" title="Not Al" id="fabNotes"><i class="far fa-edit"></i></button>
+            <div class="fab-divider"></div>
+            <button class="fab-btn" title="Dokümanlar" id="fabFiles"><i class="far fa-file-alt"></i></button>
+            <div class="fab-divider"></div>
+            <button class="fab-btn ai-sync-btn" title="Yapay Zeka Eşitleme" id="fabAiSync">
+                <i class="fas fa-bolt"></i>
+                <span>AI SYNC</span>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer-bar">
+            <p>Created by <a href="https://devosuit.com" target="_blank">devosuit</a></p>
+        </footer>
+    </main>
+
+    <!-- Custom alert overlay -->
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-box">
+            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+            <h3 id="alertTitle">Bilgi</h3>
+            <p id="alertMessage">Bu özellik çok yakında aktif olacaktır.</p>
+            <button class="alert-close-btn" onclick="closeAlert()">Tamam</button>
+        </div>
     </div>
 
     <script src="assets/js/dashboard.js"></script>

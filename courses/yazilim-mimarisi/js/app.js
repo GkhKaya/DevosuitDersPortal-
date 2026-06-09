@@ -113,3 +113,39 @@ function applyStoredTheme() {
         });
     }
 }
+
+// ── Custom Alert Modal ────────────────────────────────────────────────────────
+function showAlert(title, message, iconClass = 'fa-info-circle') {
+    const overlay = document.getElementById('alertOverlay');
+    const titleEl = document.getElementById('alertTitle');
+    const msgEl = document.getElementById('alertMessage');
+    const iconContainer = overlay.querySelector('.alert-icon');
+    
+    if (iconContainer) {
+        iconContainer.innerHTML = `<i class="fas ${iconClass}"></i>`;
+    }
+    titleEl.textContent = title;
+    msgEl.textContent = message;
+    overlay.classList.add('show');
+}
+
+// Global scope closeAlert
+window.closeAlert = function() {
+    document.getElementById('alertOverlay').classList.remove('show');
+}
+
+// Attach settings and support events to the subpage sidebar footer
+window.addEventListener('DOMContentLoaded', () => {
+    const settingsBtn = document.getElementById('settingsBtn');
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', () => {
+            showAlert('Ayarlar', 'Kişisel hesap ayarları ve portal tercihleri paneli çok yakında eklenecektir.', 'fa-cog');
+        });
+    }
+    const supportBtn = document.getElementById('supportBtn');
+    if (supportBtn) {
+        supportBtn.addEventListener('click', () => {
+            showAlert('Destek & Yardım', 'Herhangi bir sorun yaşarsanız destek talebi oluşturmak için bu panel aktif edilecektir.', 'fa-life-ring');
+        });
+    }
+});
