@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devosuit Ders Portalı</title>
+    <meta name="description" content="Kişisel üniversite ders notları, kod analizleri ve sınav simülatörü platformu.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <div class="dashboard-view">
+        <header class="dashboard-header">
+            <div class="logo-area">
+                <img src="devosuitlogo.png" alt="Devosuit Logo" class="dashboard-logo">
+                <h1>Devosuit Ders Portalı</h1>
+            </div>
+            <p>Üniversite ders projeleri, kaynak kod analizleri, konu sonu pratik testleri ve genel sınav simülasyonları içeren kişisel ders portalı.</p>
+        </header>
+
+        <div class="course-grid">
+
+            <!-- Mobil Programlama — AKTİF -->
+            <a href="courses/mobil/index.html" class="course-card active">
+                <span class="card-badge">Aktif Ders</span>
+                <div class="course-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Mobil Programlama &amp; İşletim Sistemleri</h3>
+                <p>Android (Java), Flutter (Dart) ve MAUI Blazor Hybrid ile mobil uygulama geliştirme teorisi, line-by-line kod analizleri ve 100+ soru bankası.</p>
+                <span class="enter-btn">Derse Başla <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <!-- Yazılım Mimarisi — AKTİF -->
+            <a href="courses/yazilim-mimarisi/index.html" class="course-card active">
+                <span class="card-badge">Aktif Ders</span>
+                <div class="course-icon"><i class="fas fa-drafting-compass"></i></div>
+                <h3>Yazılım Mimarisi</h3>
+                <p>Tasarım desenleri, SOLID prensipleri, mimari stiller ve yazılım mühendisliği teorisi üzerine detaylı ders notları.</p>
+                <span class="enter-btn">Derse Başla <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <!-- Veritabanı — Kilitli -->
+            <div class="course-card locked">
+                <span class="card-badge locked-badge">Çok Yakında</span>
+                <div class="course-icon"><i class="fas fa-database"></i></div>
+                <h3>Veritabanı Yönetim Sistemleri</h3>
+                <p>İlişkisel veritabanı teorisi, normalizasyon kuralları, SQL sorgu analizleri ve veri tabanı yönetim sistemleri ders çalışma notları.</p>
+                <span class="enter-btn">Kilitli</span>
+            </div>
+
+            <!-- Ağlar — Kilitli -->
+            <div class="course-card locked">
+                <span class="card-badge locked-badge">Çok Yakında</span>
+                <div class="course-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Bilgisayar Ağları</h3>
+                <p>OSI ve TCP/IP referans modelleri, alt ağlara bölme (subnetting), IP adresleri ve yönlendirme protokolleri laboratuvar çalışmaları.</p>
+                <span class="enter-btn">Kilitli</span>
+            </div>
+
+        </div>
+
+        <button class="theme-toggle dashboard-theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i> <span>Karanlık Mod</span>
+        </button>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazılım Mimarisi &amp; Tasarımı — Devosuit</title>
+    <meta name="description" content="Yazılım mimarisi yapıtaşları, SOLID tasarımı, cohesion/coupling, kalite öznitelikleri, mimari stiller ve sınav simülatörü.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="in-workspace">
+
+    <!-- ─── Sidebar ──────────────────────────────────────────────────── -->
+    <aside id="sidebarView">
+        <div class="sidebar-brand">
+            <img src="../../devosuitlogo.png" alt="Devosuit Logo" class="sidebar-logo">
+            <span class="sidebar-title">Devosuit Portal</span>
+        </div>
+
+        <a href="../../index.html" class="back-to-dashboard-btn">
+            <i class="fas fa-arrow-left"></i> Ders Seçimine Dön
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#derse-giris" class="active"><i class="fas fa-sign-in-alt"></i> 1. Giriş &amp; Yapıtaşları</a></li>
+            <li><a href="#mimari-dusunme"       ><i class="fas fa-brain"></i>      2. Mimari Düşünme</a></li>
+            <li><a href="#modulerlik"            ><i class="fas fa-cubes"></i>      3. Modüler Tasarım</a></li>
+            <li><a href="#mimari-karakteristikler"><i class="fas fa-shield-alt"></i> 4. Kalite Öznitelikleri</a></li>
+            <li><a href="#olcmeyi-yonetme"       ><i class="fas fa-chart-line"></i> 5. Metrikler &amp; Fitness</a></li>
+            <li><a href="#bilesen-tabanli"       ><i class="fas fa-project-diagram"></i> 6. Bileşen Tasarımı</a></li>
+            <li><a href="#mimari-stiller"        ><i class="fas fa-drafting-compass"></i> 7. Mimari Stiller</a></li>
+            <li class="nav-divider">
+                <a href="#exam-simulator" class="nav-special-link">
+                    <i class="fas fa-file-signature"></i> 100 Soru Simülatör
+                </a>
+            </li>
+        </ul>
+
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i> <span>Karanlık Mod</span>
+        </button>
+    </aside>
+
+    <!-- ─── Workspace ───────────────────────────────────────────────── -->
+    <main id="mainWorkspace">
+        <header>
+            <div class="workspace-header-title">
+                <img src="../../devosuitlogo.png" alt="Devosuit Logo" class="workspace-logo">
+                <div class="workspace-title-text">
+                    <h1>Yazılım Mimarisi Çalışma Alanı</h1>
+                    <p>SOLID prensipleri, mimari metrikler, stil analizleri ve interaktif testler</p>
+                </div>
+            </div>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search-input" id="searchInput"
+                       placeholder="Konu veya terim ara..." oninput="filterContent()">
+            </div>
+        </header>
+
+        <div id="projectsContainer"></div>
+    </main>
+
+    <!-- ─── Engine ──────────────────────────────────────────────────── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <!-- ─── Data ────────────────────────────────────────────────────── -->
+    <script src="data/questions.js"></script>
+    <script src="data/mini-quizzes.js"></script>
+
+    <!-- ─── Sections (her konu kendi dosyasında) ────────────────────── -->
+    <script src="sections/derse-giris.js"></script>
+    <script src="sections/mimari-dusunme.js"></script>
+    <script src="sections/modulerlik.js"></script>
+    <script src="sections/mimari-karakteristikler.js"></script>
+    <script src="sections/olcmeyi-yonetme.js"></script>
+    <script src="sections/bilesen-tabanli.js"></script>
+    <script src="sections/mimari-stiller.js"></script>
+    <script src="sections/exam-simulator.js"></script>
+
+    <!-- ─── Modules ─────────────────────────────────────────────────── -->
+    <script src="js/quiz.js"></script>
+    <script src="js/mini-quiz.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
