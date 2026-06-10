@@ -1,8 +1,9 @@
 // Devosuit - 100 Soruluk Sınav Soruları
 // Bu dosya otomatik üretilmiştir; elle düzenlemeyin.
 const questionsList = [
+    // Bölüm 1: Derse Giriş - Giriş & Temel Yapıtaşları (0-14)
     {
-        "q": "[Sınav Odaklı] Yazılım mimarisinin (Software Architecture) dört temel yapıtaşından hangisi, tercih edilen mimari stilin (Mikroservis, Katmanlı vb.) türünü belirtir?",
+        "q": "Yazılım mimarisinin (Software Architecture) dört temel yapıtaşından hangisi, tercih edilen mimari stilin (Mikroservis, Katmanlı vb.) türünü belirtir?",
         "options": [
             "Mimari Kararlar (Decisions)",
             "Yapı (Structure)",
@@ -10,21 +11,21 @@ const questionsList = [
             "Mimari Karakteristikler (Quality Attributes)"
         ],
         "a": 1,
-        "desc": "Yapı (Structure), mimari stili temsil eder. Örneğin uygulamanın mikroservislerle yazılmış olması yapısını belirtir."
+        "desc": "Yapı (Structure), sistemin genel mimari stilini temsil eder. Sadece yapı mimarinin tamamını tanımlamaz, diğer yapıtaşlarıyla bütünleşiktir."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin işlevselliğinden bağımsız olarak başarısını tanımlayan, genelde '-ebilirlik' (ölçeklenebilirlik, test edilebilirlik) ile biten kavram hangisidir?",
+        "q": "Sistemin işlevselliğinden bağımsız olarak başarısını tanımlayan, genelde '-ebilirlik' (ölçeklenebilirlik, test edilebilirlik) ile biten kavram hangisidir?",
         "options": [
-            "Mimari Yapı",
-            "Tasarım İlkeleri",
-            "Mimari Kararlar",
-            "Mimari Karakteristikler"
+            "Mimari Yapı (Structure)",
+            "Tasarım İlkeleri (Design Principles)",
+            "Mimari Kararlar (Decisions)",
+            "Mimari Karakteristikler (Quality Attributes)"
         ],
         "a": 3,
-        "desc": "Mimari Karakteristikler (Örn: Ölçeklenebilirlik, Güvenilirlik), fonksiyonel olmayan gereksinimlerdir."
+        "desc": "Mimari Karakteristikler, sistemin fonksiyonel olmayan gereksinimlerini ve sistemin operasyonel veya yapısal başarısını ölçen niteliklerdir."
     },
     {
-        "q": "[Sınav Odaklı] Mimar tarafından belirlenen, hangi katmanların veritabanına doğrudan erişebileceği gibi kesin sınırları ve kuralları ifade eden yapı hangisidir?",
+        "q": "Mimar tarafından belirlenen, hangi katmanların veritabanına doğrudan erişebileceği gibi kesin sınırları ve kuralları ifade eden yapı hangisidir?",
         "options": [
             "Tasarım İlkeleri",
             "Mimari Kararlar (Decisions)",
@@ -32,10 +33,10 @@ const questionsList = [
             "Yazılım Yapısı"
         ],
         "a": 1,
-        "desc": "Mimari Kararlar, geliştirme ekipleri için kesin kurallar ve kısıtlamalar belirler."
+        "desc": "Mimari Kararlar, geliştiricilere rehberlik etmek yerine kesin sınırlar ve kurallar (kısıtlamalar) tanımlar."
     },
     {
-        "q": "[Sınav Odaklı] Kesin kısıtlamalar yerine, asenkron mesajlaşma gibi geliştirici ekiplere yol gösteren rehber ilkeler hangisidir?",
+        "q": "Kesin kısıtlamalar yerine, asenkron mesajlaşma gibi geliştirici ekiplere yol gösteren rehber ilkeler hangisidir?",
         "options": [
             "Tasarım İlkeleri (Design Principles)",
             "Mimari Kararlar",
@@ -43,461 +44,467 @@ const questionsList = [
             "Modülerlik Prensipleri"
         ],
         "a": 0,
-        "desc": "Tasarım İlkeleri, kurallar yerine daha çok rehber niteliğindedir ve geliştiricilere özgürlük tanır."
+        "desc": "Tasarım İlkeleri, mimari kararlar kadar katı olmayan, geliştiricilere uygun çözümü seçerken rehberlik ve özgürlük sunan yönergelerdir."
     },
     {
-        "q": "[Sınav Odaklı] Yazılım Mimarisinin Birinci Kuralı aşağıdakilerden hangisidir?",
+        "q": "Yazılım Mimarisinin Birinci Kuralı aşağıdakilerden hangisidir?",
         "options": [
-            "En popüler teknolojiyi seç.",
-            "Her şeyin en hızlı şekilde çalışmasını sağla.",
+            "En popüler teknolojiyi seçmek her zaman en düşük riskli çözümdür.",
+            "Her şeyin en hızlı şekilde çalışmasını sağlamak mimarinin nihai hedefidir.",
             "Yazılım mimarisinde her şey bir ödünleşimdir (trade-off).",
-            "Mimari kararlar asla değiştirilemez."
+            "Mimari kararlar bir kez alındıktan sonra asla değiştirilemez."
         ],
         "a": 2,
-        "desc": "Birinci Kural: 'Yazılım mimarisinde her şey bir trade-off'tur. Gelişigüzel karar verilmez, her seçimin bir maliyeti vardır.'"
+        "desc": "Birinci Kural: 'Yazılım mimarisinde her şey bir trade-off'tur. Eğer bir mimar herhangi bir trade-off bulamadığını söylüyorsa, henüz yeterince araştırmamış demektir.'"
     },
     {
-        "q": "[Sınav Odaklı] Yazılım Mimarisinin İkinci Kuralı nedir?",
+        "q": "Yazılım Mimarisinin İkinci Kuralı nedir?",
         "options": [
-            "'Nasıl' yapıldığı, 'neden' yapıldığından daha önemlidir.",
-            "'Neden' yapıldığı (neden o kararın seçildiği), 'nasıl' yapıldığından daha önemlidir.",
-            "Sürekli yeni kütüphaneler kullanılmalıdır.",
-            "Veritabanı tasarımı her zaman bağımsız olmalıdır."
+            "Kararın 'nasıl' uygulandığı, 'neden' seçildiğinden her zaman daha önemlidir.",
+            "Bir kararın 'neden' (gerekçesi) seçildiği, 'nasıl' uygulandığından daha önemlidir.",
+            "En kararlı sistemler, veri katmanını tamamen soyutlayan sistemlerdir.",
+            "Sistem tasarımları kullanılan programlama dilinin yetenekleriyle sınırlandırılmalıdır."
         ],
         "a": 1,
-        "desc": "İkinci Kural: 'Neden (Why) sorusu, Nasıl (How) sorusundan daha önemlidir.' Mimari kararın arkasındaki gerekçeler esastır."
+        "desc": "İkinci Kural: 'Neden sorusu, Nasıl sorusundan daha önemlidir.' Alınan kararın arkasındaki mimari gerekçeler esastır."
     },
     {
-        "q": "[Sınav Odaklı] ISO/IEC/IEEE 42010 standardına göre mimari nedir?",
+        "q": "ISO/IEC/IEEE 42010 standardına göre mimarinin resmi tanımı nedir?",
         "options": [
-            "Sadece bir veritabanı şeması tasarımıdır.",
-            "Bileşenlerin organizasyonu veya yapısı, bunların arayüzleri ve etkileşimleridir.",
-            "Java veya C# dillerinde sınıflar yazma sanatıdır.",
-            "Kodun çalıştırıldığı donanımın adıdır."
+            "Bir yazılım sisteminin veritabanı şemalarının ve SQL sorgu performanslarının toplamıdır.",
+            "Arayüzler aracılığıyla etkileşime giren önemli bileşenlerin organizasyonu veya yapısıdır.",
+            "Programlama dilinde yazılan sınıfların ve aralarındaki kalıtım ilişkilerinin derleme zamanındaki şemasıdır.",
+            "Kodun canlı sunuculardaki donanım kaynaklarına dağıtılmasını sağlayan topoloji diyagramıdır."
         ],
         "a": 1,
-        "desc": "Standart tanımına göre mimari; bileşenlerin, arayüzlerin ve bunların etkileşimlerinin organizasyonu/yapısıdır."
+        "desc": "Standart tanımına göre mimari; arayüzler vasıtasıyla etkileşime giren önemli bileşenlerin organizasyonu veya yapısıdır."
     },
     {
-        "q": "[Sınav Odaklı] Mimaride kesin sınırları aşmak için izin verilen istisnalara ne ad verilir?",
+        "q": "Mimaride kesin sınırları ve kuralları aşmak için mimar kontrolünde izin verilen istisnalara ne ad verilir?",
         "options": [
             "Modülerlik",
-            "Entropy",
+            "Entropi (Entropy)",
             "Değişkenlik / Varyans (Variance)",
-            "Coupling"
+            "Bağımlılık (Coupling)"
         ],
         "a": 2,
-        "desc": "Mimari kararların dışına çıkılması gereken durumlardaki kontrollü istisnalara varyans (variance) denir."
+        "desc": "Mimari kararların dışına çıkılması gereken özel durumlar için mimar tarafından onaylanan kontrollü sapmalara varyans (variance) denir."
     },
     {
-        "q": "[Sınav Odaklı] Teknolojideki hızlı değişimlerin yazılım mimarı kariyeri üzerindeki en büyük dezavantajı nedir?",
+        "q": "Yazılım mimarlığı mesleğindeki 'teknoloji değişkenliği ve hızlı trend kaymaları' mimar üzerinde ne tür bir zorluk yaratır?",
         "options": [
-            "Trendlerin ve araçların çok hızlı değişmesi ve eskimesi.",
-            "Kod yazma ihtiyacının tamamen ortadan kalkması.",
-            "Donanım fiyatlarının artması.",
-            "Çok fazla SQL sorgusu yazılması."
-        ],
-        "a": 0,
-        "desc": "Teknoloji dünyasında sürekli yeni trendler çıktığından mimarların sürekli güncel kalması ve adaptasyon sağlaması zordur."
-    },
-    {
-        "q": "[Sınav Odaklı] Utilitas, Firmitas ve Venustas kavramlarının yazılımdaki karşılığı sırasıyla hangisidir?",
-        "options": [
-            "Hız, Güvenlik, Arayüz",
-            "Kullanışlılık, Dayanıklılık/Sağlamlık, Zarafet/Güzellik",
-            "Lisanslama, Test, Dağıtım",
-            "Modül, Bileşen, Paket"
+            "Mimarın sürekli kod yazmak zorunda kalarak idari işlerden uzaklaşması.",
+            "Teknolojik yenilikleri takip edemeyip eski bilgilerle mimari tasarlamaya devam etme riski.",
+            "Tüm donanım maliyetlerinin doğrudan yazılım mimarının bütçesinden düşülmesi.",
+            "Yazılım geliştiricilerle mimarların aynı takımlarda çalışmasını tamamen imkansız kılması."
         ],
         "a": 1,
-        "desc": "Antik Roma mimarı Vitruvius'un bu üç sac ayağı (işlev, sağlamlık, estetik) yazılım mimarisine de doğrudan uyarlanabilir."
+        "desc": "Teknoloji dünyası çok hızlı değişmektedir. Bir mimar için en büyük zorluklardan biri, teknik genişliğini güncel tutarak eski veya yanlış teknolojilerle kararlar vermemektir."
     },
     {
-        "q": "[Sınav Odaklı] Yazılım mimarisinin (Software Architecture) dört temel yapıtaşından hangisi, tercih edilen mimari stilin (Mikroservis, Katmanlı vb.) türünü belirtir?",
+        "q": "Antik Roma mimarı Vitruvius'un iyi binalar için belirlediği 'Utilitas, Firmitas, Venustas' kavramlarının yazılım mimarisindeki sırasıyla anlam karşılığı nedir?",
         "options": [
-            "Mimari Kararlar (Decisions)",
-            "Yapı (Structure)",
-            "Tasarım İlkeleri (Design Principles)",
-            "Mimari Karakteristikler (Quality Attributes)"
+            "Performans hızı, Kodun güvenliği, Kullanıcı arayüzünün estetiği",
+            "İşlevsellik/Kullanışlılık, Dayanıklılık/Sağlamlık, Zarafet/Temiz Tasarım",
+            "Donanım esnekliği, Veritabanı tutarlılığı, Lisanslama maliyeti",
+            "Mikroservis yapısı, Entegrasyon kolaylığı, Test kapsamı"
         ],
         "a": 1,
-        "desc": "Yapı (Structure), mimari stili temsil eder. Örneğin uygulamanın mikroservislerle yazılmış olması yapısını belirtir."
+        "desc": "Vitruvius'un bu üç prensibi (kullanışlılık, sağlamlık, zarafet/estetik) yazılım mimarisinin kalitesini değerlendirmede de temel referanslardır."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin işlevselliğinden bağımsız olarak başarısını tanımlayan, genelde '-ebilirlik' (ölçeklenebilirlik, test edilebilirlik) ile biten kavram hangisidir?",
+        "q": "Yazılım mimarisinin yapısal bileşenlerini tanımlarken kullanılan 'Bileşen' (Component) teriminin en belirgin özelliği hangisidir?",
         "options": [
-            "Mimari Yapı",
+            "Yalnızca tek bir kaynak kod dosyasından oluşan en küçük mantıksal birim olması.",
+            "Dış dünyaya iyi tanımlanmış arayüzler (interface) sunan ve bağımsız olarak kurulabilen/çalıştırılabilen modül kümesi olması.",
+            "Yalnızca veritabanı işlemlerini yürüten SQL sınıflarını temsil etmesi.",
+            "Uygulamanın çalışacağı donanımsal sunucu bilgisayarların fiziksel adıdır."
+        ],
+        "a": 1,
+        "desc": "Bileşenler (components), sınırları belirlenmiş, arayüzler vasıtasıyla etkileşen, bağımsız dağıtılabilen (deployable) yapı taşlarıdır."
+    },
+    {
+        "q": "Mimaride 'Tasarım İlkeleri' (Design Principles) ile 'Mimari Kararlar' (Decisions) arasındaki en temel fark nedir?",
+        "options": [
+            "Tasarım ilkeleri kodun derlenmesini sağlarken, mimari kararlar sadece dökümantasyon amaçlıdır.",
+            "Kararlar kesin sınırlar çizen katı kurallarken, ilkeler geliştiricilere rehberlik sunan esnek önerilerdir.",
+            "İlkeler veri tabanı şemasını belirler, kararlar ise kullanıcı arayüzünü tasarlar.",
+            "İkisi arasında hiçbir kavramsal fark yoktur; aynı anlama gelirler."
+        ],
+        "a": 1,
+        "desc": "Kararlar (decisions) kesin kurallardır ve kısıtlama yaratır. İlkeler (principles) ise geliştiricilere yol gösterir ve özgürlük tanır."
+    },
+    {
+        "q": "Bir e-ticaret uygulamasında 'Sepet Servisi'nin ödeme anında hata vermeden çalışması ve 7/24 ayakta kalması hangi yapıtaşı ile doğrudan ilgilidir?",
+        "options": [
             "Tasarım İlkeleri",
             "Mimari Kararlar",
-            "Mimari Karakteristikler"
-        ],
-        "a": 3,
-        "desc": "Mimari Karakteristikler (Örn: Ölçeklenebilirlik, Güvenilirlik), fonksiyonel olmayan gereksinimlerdir."
-    },
-    {
-        "q": "[Sınav Odaklı] Mimar tarafından belirlenen, hangi katmanların veritabanına doğrudan erişebileceği gibi kesin sınırları ve kuralları ifade eden yapı hangisidir?",
-        "options": [
-            "Tasarım İlkeleri",
-            "Mimari Kararlar (Decisions)",
-            "Süreç Yönetimi",
-            "Yazılım Yapısı"
-        ],
-        "a": 1,
-        "desc": "Mimari Kararlar, geliştirme ekipleri için kesin kurallar ve kısıtlamalar belirler."
-    },
-    {
-        "q": "[Sınav Odaklı] Kesin kısıtlamalar yerine, asenkron mesajlaşma gibi geliştirici ekiplere yol gösteren rehber ilkeler hangisidir?",
-        "options": [
-            "Tasarım İlkeleri (Design Principles)",
-            "Mimari Kararlar",
-            "İş Kuralları",
-            "Modülerlik Prensipleri"
-        ],
-        "a": 0,
-        "desc": "Tasarım İlkeleri, kurallar yerine daha çok rehber niteliğindedir ve geliştiricilere özgürlük tanır."
-    },
-    {
-        "q": "[Sınav Odaklı] Yazılım Mimarisinin Birinci Kuralı aşağıdakilerden hangisidir?",
-        "options": [
-            "En popüler teknolojiyi seç.",
-            "Her şeyin en hızlı şekilde çalışmasını sağla.",
-            "Yazılım mimarisinde her şey bir ödünleşimdir (trade-off).",
-            "Mimari kararlar asla değiştirilemez."
+            "Mimari Karakteristikler (Erişilebilirlik/Güvenilirlik)",
+            "Mimari Stiller"
         ],
         "a": 2,
-        "desc": "Birinci Kural: 'Yazılım mimarisinde her şey bir trade-off'tur. Gelişigüzel karar verilmez, her seçimin bir maliyeti vardır.'"
+        "desc": "Sistemin kesintisiz çalışması ve ayakta kalması operasyonel bir kalite özniteliğidir (Availability - Erişilebilirlik)."
     },
     {
-        "q": "[Sınav Odaklı] Geliştirici (Developer) bakış açısı ile Mimar (Architect) bakış açısı arasındaki temel fark nedir?",
+        "q": "Yazılım mimarisinin yapı (structure) boyutu aşağıdakilerden hangisini netleştirmek için kullanılır?",
         "options": [
-            "Geliştiriciler daha geniş bakar, mimarlar sadece tek bir fonksiyona odaklanır.",
-            "Geliştiriciler derin uzmanlığa (depth) odaklanırken, mimarlar genişliğe (breadth) ve trade-off analizlerine odaklanır.",
-            "Mimarlar sadece HTML/CSS yazar, geliştiriciler veritabanı yazar.",
-            "Geliştiriciler planlama yapar, mimarlar sadece kod yazar."
+            "Hangi programlama dilinin hangi sürümünün seçileceğini.",
+            "Kullanılacak veri tabanındaki tablo ilişkilerini ve indeks stratejilerini.",
+            "Katmanlı, olay tabanlı, mikroservis veya mikroçekirdek gibi mimari stil türünü.",
+            "Kodun test coverage oranının minimum kaç olması gerektiğini."
+        ],
+        "a": 2,
+        "desc": "Yapı (structure), tercih edilen mimari stilin türünü (Örn: Monolitik katmanlı mimari veya Mikroservis) belirtir."
+    },
+    {
+        "q": "Mimar tarafından belirlenen kararların geliştirici ekipler tarafından uygulanmamasının önündeki en büyük organizasyonel engel hangisidir?",
+        "options": [
+            "Geliştirici ekiplerin kullanılan dilde uzman olmaması.",
+            "Mimarın takımdan izole çalışarak fildişi kule (ivory tower) sendromu oluşturması.",
+            "Gereksinimlerin iş analistleri tarafından sürekli değiştirilmesi.",
+            "Uygulamanın test sunucularının bulunmaması."
         ],
         "a": 1,
-        "desc": "Mimarın değeri teknolojileri geniş bir perspektiften ele alıp doğru seçimleri ve trade-off'ları yapabilmesiyle ölçülür."
+        "desc": "Mimar ekiplerden bağımsız ve izole çalıştığında kararların gerçek koda aktarımı kopar ve mimari ile kod arasında tutarsızlık oluşur."
+    },
+
+    // Bölüm 2: Mimari Düşünme & Ödünleşimler (Topic & Queue) (15-29)
+    {
+        "q": "Geliştirici (Developer) bakış açısı ile Mimar (Architect) bakış açısı arasındaki en temel fark nedir?",
+        "options": [
+            "Geliştirici sistemi daha geniş bir açıdan tasarlarken, mimar sadece veritabanına odaklanır.",
+            "Geliştirici derinlemesine teknik uzmanlığa odaklanırken, mimar teknik genişliğe ve trade-off'lara odaklanır.",
+            "Mimar sadece dökümantasyon yazar, geliştirici ise tüm kararları tek başına alır.",
+            "Geliştirici iş hedeflerini belirler, mimar ise sadece kod yazar."
+        ],
+        "a": 1,
+        "desc": "Geliştirici belirli bir konuda derin uzmanlığa (depth) yönelirken, mimar geniş bir perspektiften (breadth) teknolojileri ve ödünleşimleri analiz eder."
     },
     {
-        "q": "[Sınav Odaklı] Bilgi Piramidinde (Knowledge Pyramid) bir mimarın değerinin en yüksek olduğu ve genişletmeye çalıştığı katman hangisidir?",
+        "q": "Bilgi Piramidinde (Knowledge Pyramid) bir mimarın değerinin en yüksek olduğu ve sürekli genişletmeye çalıştığı katman hangisidir?",
         "options": [
-            "'Ne bilmediğini bilmek' (Known Unknowns) - teknik genişlik",
             "'Ne bildiğini bilmek' (Known Knowns) - teknik derinlik",
-            "Hiçbir şey bilmemek",
-            "Sadece donanım mimarisi"
+            "'Ne bilmediğini bilmek' (Known Unknowns) - teknik genişlik",
+            "'Ne bildiğini bilmemek' (Unknown Knowns) - gizli yetenekler",
+            "'Ne bilmediğini bilmemek' (Unknown Unknowns) - tam belirsizlik"
+        ],
+        "a": 1,
+        "desc": "Known Unknowns katmanı, mimarın aşina olduğu ama derinlemesine bilmediği teknolojileri içerir. Bu katman genişledikçe mimarın çözüm seçenekleri artar."
+    },
+    {
+        "q": "Bir geliştiricinin mimarlık rolüne geçerken yaptığı en yaygın kariyer hatası nedir?",
+        "options": [
+            "Sadece tek bir dilde uzmanlaşmaya devam etmek yerine yeni dilleri öğrenmeye başlamak.",
+            "Teknik genişlik kazanmak yerine eski uzman olduğu alanda aşırı derin kalmaya çalışıp kararları sınırlamak.",
+            "Veritabanı optimizasyon derslerini almaktan kaçınmak.",
+            "Kod yazmayı tamamen durdurup sadece iş analizi yapmak."
+        ],
+        "a": 1,
+        "desc": "Yeni mimarlar bazı uzmanlıklarını bilinçli olarak bırakıp daha geniş bir teknoloji portföyü oluşturmalıdır, aksi takdirde 'her probleme çekiçle yaklaşan çivici' olurlar."
+    },
+    {
+        "q": "Yazılım mimarisinde sıkça kullanılan 'Duruma bağlıdır' (It depends) ifadesi neyi vurgulamaktadır?",
+        "options": [
+            "Mimari tasarımların tesadüflere bağlı olarak başarıya ulaştığını.",
+            "Yazılımda mutlak doğru veya yanlış olmadığını, her kararın belirli ödünleşimlere (trade-off) dayandığını.",
+            "Mimarın karar vermekten kaçınarak sorumluluğu geliştiricilere attığını.",
+            "Sadece veritabanının türünün mimariyi belirlediğini."
+        ],
+        "a": 1,
+        "desc": "Mimaride her kararın artıları ve eksileri vardır. Koşullara göre en az kötü olan karar (en uygun trade-off) seçilmelidir."
+    },
+    {
+        "q": "Açık artırma sisteminde tekliflerin (bid) işlenmesi için 'Topic (Pub-Sub)' modeli seçildiğinde elde edilen en büyük mimari avantaj hangisidir?",
+        "options": [
+            "Her teklif mesajının ağ üzerinde şifrelenmesini garanti etmesi.",
+            "Teklifin sadece tek bir tüketici tarafından işlenmesini garanti etmesi.",
+            "Gevşek bağlılık (loosely coupled) ve yüksek genişletilebilirlik (yeni abonelerin kolayca eklenmesi).",
+            "Daha yüksek ağ iletim hızına sahip olması."
+        ],
+        "a": 2,
+        "desc": "Pub-Sub (Topic) yapısı gevşek bağlıdır. Üretici tüketicileri bilmez, sisteme yeni tüketiciler (subscriber) eklemek üreticiyi etkilemez."
+    },
+    {
+        "q": "Para çekme ve bakiye güncelleme işlemlerinin yapıldığı bir bankacılık sisteminde neden 'Queue (Point-to-Point)' modeli tercih edilir?",
+        "options": [
+            "Aynı para çekme mesajının tüm banka şubelerine kopyalanarak gönderilmesi için.",
+            "Mesajın sadece tek bir tüketici (para çekme servisi) tarafından güvenle işlenip kuyruktan silinmesini garanti etmek için.",
+            "Kuyruk yapısının topic yapısına göre her zaman daha ucuz maliyetli olması.",
+            "Kuyruğa bağlanan herkesin veriyi kolayca dinleyebilmesi."
+        ],
+        "a": 1,
+        "desc": "Queue modelinde bir mesaj sadece bir tüketici tarafından çekilir ve işlenir. Bu sayede aynı finansal işlemin mükerrer yapılması engellenir."
+    },
+    {
+        "q": "Topic (Pub-Sub) mimari modelinin en belirgin dezavantajı aşağıdakilerden hangisidir?",
+        "options": [
+            "Servislerin birbirine çok sıkı bağlı (tightly coupled) olması.",
+            "Mesaj takibinin (tracing/debugging) karmaşıklaşması ve mesaj güvenliğinin (kimin abone olduğunu kontrol etme) zorluğu.",
+            "Kuyruk boyutunun dinamik olarak artırılamaması.",
+            "Yalnızca metin formatında veri iletimine izin vermesi."
+        ],
+        "a": 1,
+        "desc": "Topic modelinde mesajlar herkese açık olabildiğinden erişim kontrolü zordur ve mesajın hangi servisler tarafından başarıyla işlendiğini izlemek ek yük getirir."
+    },
+    {
+        "q": "Queue (Point-to-Point) modelinin en belirgin mimari dezavantajı nedir?",
+        "options": [
+            "Tüketicilerin kuyruğa bağlanırken hata alması.",
+            "Kuyruğa eklenen mesajların zamanla kendiliğinden silinmesi.",
+            "Üreticinin (producer) hangi kuyruğa (ve dolayısıyla dolaylı olarak hangi tüketiciye) göndereceğini bilmek zorunda olması (sıkı bağlılık).",
+            "Kuyruğun sadece tek yönlü veri akışını desteklemesi."
+        ],
+        "a": 2,
+        "desc": "Queue modelinde üretici ile tüketici arasında kuyruk adı üzerinden daha sıkı bir bağ (coupling) vardır."
+    },
+    {
+        "q": "Mimar gibi düşünmenin dört boyutundan biri olan 'teknik kararları iş hedeflerine çevirebilmek' ne anlama gelir?",
+        "options": [
+            "Şirketin finansal bütçesini tamamen mimara devretmek.",
+            "İş gereksinimlerini (Örn: Hızlı büyüme, veri güvenliği) teknik kalite özniteliklerine (Örn: Ölçeklenebilirlik, şifreleme) dönüştürmek.",
+            "İş analistlerine Java veya C# programlama dillerini öğretmek.",
+            "Yalnızca donanım masraflarını kısarak bütçe tasarrufu sağlamak."
+        ],
+        "a": 1,
+        "desc": "İyi bir mimar, şirketin iş hedeflerini doğrudan teknik kalite özniteliklerine ve mimari kararlara tercüme eder."
+    },
+    {
+        "q": "Geleneksel yazılım geliştirme modellerinde mimarın takımdan ayrı çalışmasının yarattığı en büyük sorun nedir?",
+        "options": [
+            "Mimarın aldığı kararların geliştiricilere ulaşmaması ve takımdan geri bildirim alınamaması (Fildişi Kule sendromu).",
+            "Geliştiricilerin SQL yazmayı tamamen unutması.",
+            "Sistemin daha hızlı güncellenmesi ve test edilmesi.",
+            "Mimarın çok yüksek maaş alması."
         ],
         "a": 0,
-        "desc": "Mimarlar için 'ne bilmediğini bilmek' (Known Unknowns) teknik genişliği artırır, böylece doğru araçları seçebilirler."
-    },
-    {
-        "q": "[Sınav Odaklı] Açık artırma sisteminde tekliflerin işlenmesi için 'Topic (Pub-Sub)' seçildiğinde elde edilen en büyük avantaj nedir?",
-        "options": [
-            "Her mesaja özel şifreleme sunması.",
-            "Aynı mesajı sadece tek bir tüketicinin almasını garanti etmesi.",
-            "Gevşek bağlılık (loosely coupled) ve yüksek genişletilebilirlik.",
-            "Daha yüksek ağ hızı."
-        ],
-        "a": 2,
-        "desc": "Pub-Sub yapısında üretici tüketicileri tanımaz. Yeni bir abone eklemek sadece o konuya üye olmakla mümkündür."
-    },
-    {
-        "q": "[Sınav Odaklı] Para çekme gibi işlemlerin yapıldığı bankacılık sisteminde neden 'Queue (Point-to-Point)' modeli tercih edilir?",
-        "options": [
-            "Aynı işlemin birden fazla servis tarafından kopyalanıp işlenmesini sağlamak için.",
-            "Bir işlemin sadece tek bir tüketici tarafından güvenle işlenmesini ve kuyruktan silinmesini garanti etmek için.",
-            "Kuyruk sisteminin ücretsiz olması.",
-            "Herkesin veriye abone olabilmesi."
-        ],
-        "a": 1,
-        "desc": "Kuyruk modelinde bir mesaj sadece tek bir tüketici tarafından çekilir ve işlenir. Çift işlem yapılması engellenir."
-    },
-    {
-        "q": "[Sınav Odaklı] Topic (Pub-Sub) modelinin en büyük dezavantajı nedir?",
-        "options": [
-            "Sıkı bağlılığa yol açması.",
-            "Güvenlik/erişim kontrolünün zor olması ve mesaj takibinin (tracing) karmaşıklığı.",
-            "Yeni abone eklenememesi.",
-            "Sadece metin verisi taşınabilmesi."
-        ],
-        "a": 1,
-        "desc": "Pub-Sub'da kimlerin abone olduğunu izlemek ve veri güvenliğini sağlamak kuyruk modeline göre daha zordur."
-    },
-    {
-        "q": "[Sınav Odaklı] Queue (Point-to-Point) modelinin en belirgin dezavantajı nedir?",
-        "options": [
-            "Tüketicilerin birbirini hiç tanımaması.",
-            "Mesajların havada kaybolması.",
-            "Üreticinin hangi tüketiciye/kuyruğa gönderdiğini bilmek zorunda olması (sıkı bağlılık).",
-            "Sadece tek bir dilde yazılabilmesi."
-        ],
-        "a": 2,
-        "desc": "Point-to-point modelinde üretici mesajı kime yollayacağını (kuyruk adını) bilmek zorundadır, bu da daha sıkı bağlılık yaratır."
-    },
-    {
-        "q": "[Sınav Odaklı] Mimar gibi düşünmenin dört boyutundan biri olan 'teknik kararları iş hedeflerine çevirebilmek' ne anlama gelir?",
-        "options": [
-            "Şirketin bütçesini tamamen mimara devretmek.",
-            "İş ihtiyaçlarını (hızlı büyüme, güvenlik vb.) mimari özelliklere (ölçeklenebilirlik, yetkilendirme) dönüştürmek.",
-            "İş analistlerine Java öğretmek.",
-            "Yalnızca donanım masraflarını kısmak."
-        ],
-        "a": 1,
-        "desc": "İyi bir mimar, şirketin iş hedeflerini (Business Goals) doğrudan teknik kalite özniteliklerine (Architectural Concerns) tercüme eder."
-    },
-    {
-        "q": "[Sınav Odaklı] Geleneksel yazılım geliştirme modellerinde mimarın takımdan ayrı çalışmasının yarattığı en büyük sorun nedir?",
-        "options": [
-            "Mimarın çok yüksek maaş alması.",
-            "Mimarın aldığı kararların geliştiricilere ulaşmaması ve takımdan geri bildirim alınamaması (Fildişi Kule sendromu).",
-            "Geliştiricilerin SQL yazmayı unutması.",
-            "Sistemin daha hızlı güncellenmesi."
-        ],
-        "a": 1,
         "desc": "Mimar takımdan izole olduğunda, kararların uygulanabilirliği test edilemez ve mimari ile gerçek kod arasında kopukluk oluşur."
     },
     {
-        "q": "[Sınav Odaklı] Bir geliştiricinin mimar rolüne geçerken yaptığı en yaygın hata nedir?",
+        "q": "Bir mimar, açık artırma sisteminde teklif işleme için 'Topic' mi yoksa 'Queue' mu seçeceğine karar verirken aşağıdakilerden hangisini öncelikle yapmalıdır?",
         "options": [
-            "Daha az kahve içmeye başlaması.",
-            "Her konuda uzmanlaşmaya çalışıp teknik genişlik kazanamamak veya eski bilgilerle kalmak.",
-            "Sadece C# öğrenmek.",
-            "Kod yazmayı tamamen bırakmak."
+            "Hangisi daha popüler ise doğrudan onu seçmelidir.",
+            "Seçeneklerin getireceği ödünleşimleri (güvenlik, genişletilebilirlik, bağlılık) iş hedeflerine göre analiz etmelidir.",
+            "Veritabanı yönetim sistemini değiştirmelidir.",
+            "Kararı tamamen geliştiricilerin oylamasına bırakmalıdır."
         ],
         "a": 1,
-        "desc": "Yeni mimarlar bazı uzmanlık alanlarını bilinçli olarak bırakıp genel teknolojilere dair geniş bir bakış açısı kazanmalıdır."
+        "desc": "Mimarlık kararları ödünleşimlerin (trade-off) analiziyle verilir. Koşullara göre en doğru model belirlenmelidir."
     },
     {
-        "q": "[Sınav Odaklı] Yazılım mimarlığında 'It depends' (Duruma bağlıdır) ifadesi neyi vurgular?",
+        "q": "Yazılım mimarisinde bir kararın 'neden' alındığının belgelenmesi neden kritiktir?",
         "options": [
-            "Mimarın konuyu tam olarak bilmediğini.",
-            "Yazılımda mutlak doğru/yanlış olmadığını, her kararın ödünleşimlere (trade-offs) dayandığını.",
-            "Uygulamanın çalışıp çalışmayacağının şans eseri olduğunu.",
-            "Veritabanının tipini."
+            "Sadece yasal denetimlerde ceza almamak için.",
+            "Gelecekte mimari değiştiğinde, eski kararın hangi kısıtlamalar ve hedefler altında alındığını anlayabilmek için.",
+            "Geliştiricilerin maaş zamlarını belirlemek için.",
+            "Programlama dilinin güncellenmesini engellemek için."
         ],
         "a": 1,
-        "desc": "Mimaride her kararın artıları ve eksileri vardır. 'En iyi mimari' yoktur, 'belirli koşullardaki en uygun mimari' vardır."
+        "desc": "Kararın arkasındaki gerekçe (why), kararın nasıl (how) uygulandığından daha değerlidir çünkü gelecekteki değişikliklere ışık tutar."
     },
     {
-        "q": "[Sınav Odaklı] Geliştirici (Developer) bakış açısı ile Mimar (Architect) bakış açısı arasındaki temel fark nedir?",
+        "q": "Mimari kararların ekipler üzerindeki kısıtlayıcı etkisini esnetmek için kullanılan 'istisna süreci' nasıl yönetilmelidir?",
         "options": [
-            "Geliştiriciler daha geniş bakar, mimarlar sadece tek bir fonksiyona odaklanır.",
-            "Geliştiriciler derin uzmanlığa (depth) odaklanırken, mimarlar genişliğe (breadth) ve trade-off analizlerine odaklanır.",
-            "Mimarlar sadece HTML/CSS yazar, geliştiriciler veritabanı yazar.",
-            "Geliştiriciler planlama yapar, mimarlar sadece kod yazar."
+            "Her geliştirici istediği an kendi istisnasını uygulayabilmelidir.",
+            "Mimar tarafından değerlendirilen ve onaylanan resmi bir 'Varyans (Variance)' mekanizması ile yönetilmelidir.",
+            "Tüm kurallar tamamen kaldırılarak esneklik sağlanmalıdır.",
+            "Sadece Java dışındaki dillerde istisnalara izin verilmelidir."
         ],
         "a": 1,
-        "desc": "Mimarın değeri teknolojileri geniş bir perspektiften ele alıp doğru seçimleri ve trade-off'ları yapabilmesiyle ölçülür."
+        "desc": "Varyans süreci, mimari standartların korunması ama aynı zamanda tıkanıklıkların önlenmesi için kontrollü istisnalar tanımlar."
     },
     {
-        "q": "[Sınav Odaklı] Bilgi Piramidinde (Knowledge Pyramid) bir mimarın değerinin en yüksek olduğu ve genişletmeye çalıştığı katman hangisidir?",
+        "q": "Bir e-ticaret sepetinde siparişlerin faturalandırılması, stok düşülmesi ve kargo bildirimi gibi adımların paralel tetiklenmesinde hangi model daha uygundur?",
         "options": [
-            "'Ne bilmediğini bilmek' (Known Unknowns) - teknik genişlik",
-            "'Ne bildiğini bilmek' (Known Knowns) - teknik derinlik",
-            "Hiçbir şey bilmemek",
-            "Sadece donanım mimarisi"
-        ],
-        "a": 0,
-        "desc": "Mimarlar için 'ne bilmediğini bilmek' (Known Unknowns) teknik genişliği artırır, böylece doğru araçları seçebilirler."
-    },
-    {
-        "q": "[Sınav Odaklı] Açık artırma sisteminde tekliflerin işlenmesi için 'Topic (Pub-Sub)' seçildiğinde elde edilen en büyük avantaj nedir?",
-        "options": [
-            "Her mesaja özel şifreleme sunması.",
-            "Aynı mesajı sadece tek bir tüketicinin almasını garanti etmesi.",
-            "Gevşek bağlılık (loosely coupled) ve yüksek genişletilebilirlik.",
-            "Daha yüksek ağ hızı."
-        ],
-        "a": 2,
-        "desc": "Pub-Sub yapısında üretici tüketicileri tanımaz. Yeni bir abone eklemek sadece o konuya üye olmakla mümkündür."
-    },
-    {
-        "q": "[Sınav Odaklı] Para çekme gibi işlemlerin yapıldığı bankacılık sisteminde neden 'Queue (Point-to-Point)' modeli tercih edilir?",
-        "options": [
-            "Aynı işlemin birden fazla servis tarafından kopyalanıp işlenmesini sağlamak için.",
-            "Bir işlemin sadece tek bir tüketici tarafından güvenle işlenmesini ve kuyruktan silinmesini garanti etmek için.",
-            "Kuyruk sisteminin ücretsiz olması.",
-            "Herkesin veriye abone olabilmesi."
+            "Queue (Noktadan Noktaya)",
+            "Topic (Pub-Sub)",
+            "Single Instance Task",
+            "Batch Job Processing"
         ],
         "a": 1,
-        "desc": "Kuyruk modelinde bir mesaj sadece tek bir tüketici tarafından çekilir ve işlenir. Çift işlem yapılması engellenir."
+        "desc": "Sipariş oluşturulduğunda bir olayın (event) yayınlanması ve fatura, stok, kargo servislerinin bağımsız olarak bu olayı dinlemesi (Topic) en gevşek bağlı tasarımdır."
     },
     {
-        "q": "[Sınav Odaklı] Topic (Pub-Sub) modelinin en büyük dezavantajı nedir?",
+        "q": "Bankacılık transferlerinde kuyruğa eklenen bir para gönderme talimatının iki farklı sunucu tarafından aynı anda çekilip mükerrer gönderilmesini önleyen model hangisidir?",
         "options": [
-            "Sıkı bağlılığa yol açması.",
-            "Güvenlik/erişim kontrolünün zor olması ve mesaj takibinin (tracing) karmaşıklığı.",
-            "Yeni abone eklenememesi.",
-            "Sadece metin verisi taşınabilmesi."
+            "Topic (Yayın-Abone)",
+            "Queue (Noktadan Noktaya)",
+            "Shared Cache System",
+            "Synchronous REST Call"
         ],
         "a": 1,
-        "desc": "Pub-Sub'da kimlerin abone olduğunu izlemek ve veri güvenliğini sağlamak kuyruk modeline göre daha zordur."
+        "desc": "Queue modeli, bir mesajın sadece tek bir tüketici tarafından işlenip silinmesini garanti ettiği için mükerrer işlemleri önler."
     },
+
+    // Bölüm 3: Modülerlik, SOLID, Cohesion, Coupling & Connascence (30-44)
     {
-        "q": "[Sınav Odaklı] Modül (Module) ve Bileşen (Component) arasındaki temel fark zamanlama açısından nasıldır?",
+        "q": "Modül (Module) ve Bileşen (Component) arasındaki fark zamanlama (lifecycle) açısından nasıldır?",
         "options": [
-            "Bileşen derleme zamanında, modül çalışma zamanında var olur.",
-            "Modül geliştirme/derleme zamanında (build-time), Bileşen ise çalışma/dağıtım zamanında (run-time) var olur.",
-            "Her ikisi de sadece yazım aşamasında vardır.",
-            "Hiçbir farkları yoktur."
+            "Bileşen kodlama aşamasında vardır, modül ise canlı sunucuda oluşur.",
+            "Modül derleme/geliştirme zamanında (build-time) mantıksal gruplamadır; Bileşen ise çalışma zamanında (run-time) dağıtılan/çalıştırılan birimdir.",
+            "Modül sadece veritabanı tablolarıdır, bileşen ise kullanıcı arayüzüdür.",
+            "Her ikisi de sadece tasarım aşamasında var olan soyut kavramlardır."
         ],
         "a": 1,
-        "desc": "Modül kod seviyesindeki mantıksal gruplamadır (Java package, C# namespace). Bileşen ise çalışan dağıtık birimdir (Spring Bean, Mikroservis)."
+        "desc": "Modül geliştirme aşamasındaki paket/namespace yapısıdır. Bileşen ise çalışma zamanında çalışan deploy edilebilir bir yapıdır (örn. jar, dll, mikroservis)."
     },
     {
-        "q": "[Sınav Odaklı] Plansız gelişim, acele güncellemeler sonucu oluşan, karmaşık, sınırları belirsiz ve sürdürülemez yazılım hiyerarşisine ne ad verilir?",
+        "q": "Plansız gelişim, acele düzeltmeler ve mimari denetim eksikliği sonucu oluşan, sınırları belirsiz ve sürdürülemez yazılım yapısına verilen isim nedir?",
         "options": [
+            "Clean Architecture",
             "Microkernel Style",
             "Big Ball of Mud (Büyük Çamur Topu)",
-            "Clean Architecture",
             "Layered Architecture"
         ],
-        "a": 1,
-        "desc": "Big Ball of Mud, yazılım entropisinin kontrolden çıkmasıyla oluşan en yaygın anti-desendir."
+        "a": 2,
+        "desc": "Big Ball of Mud, modülerliğin yok olduğu ve her şeyin birbirine sıkı sıkıya bağlandığı sürdürülemez bir mimari anti-desendir."
     },
     {
-        "q": "[Sınav Odaklı] SOLID ilkelerinden 'Liskov Substitution Principle (LSP)' neyi savunur?",
+        "q": "SOLID ilkelerinden 'Liskov Substitution Principle (LSP)' temel olarak neyi savunur?",
         "options": [
-            "Sınıfların değişime kapalı, gelişime açık olmasını.",
-            "Bir alt sınıfın, üst sınıfın yerine hiçbir hata oluşturmadan sorunsuzca geçebilmesini.",
-            "Arayüzlerin olabildiğince küçük ve özelleşmiş olmasını.",
-            "Her sınıfın tek bir iş yapmasını."
+            "Sınıfların değişime kapalı, yeni özelliklere açık tasarlanmasını.",
+            "Bir alt sınıf nesnesinin, türetildiği üst sınıf nesnesi yerine hiçbir hata üretmeden geçebilmesini.",
+            "Her sınıfın sadece tek bir sorumluluğu olmasını.",
+            "Arayüzlerin olabildiğince büyük ve genel tanımlanmasını."
         ],
         "a": 1,
-        "desc": "LSP, türetilmiş sınıfların ana sınıfın davranış sözleşmesini (contract) bozmaması gerektiğini belirtir."
+        "desc": "LSP, türetilmiş sınıfların ana sınıfın davranış sözleşmesini (contract) bozmaması ve onun yerine sorunsuz kullanılabilmesini gerektirir."
     },
     {
-        "q": "[Sınav Odaklı] Bir modül içindeki elemanların birbirine ne kadar güçlü bağlandığını ve tek bir amaca hizmet ettiğini belirten ölçü hangisidir?",
+        "q": "Bir modül içerisindeki elemanların birbirine ne kadar sıkı bağlandığını ve tek bir amaca ne kadar hizmet ettiğini ölçen nitelik hangisidir?",
         "options": [
-            "Coupling (Bağımlılık)",
-            "Connascence",
-            "Cohesion (Bağlılık/Tutarlılık)",
-            "Abstracness"
+            "Bağımlılık (Coupling)",
+            "Birlikte Evrimleşme (Connascence)",
+            "Bağlılık/Tutarlılık (Cohesion)",
+            "Kararsızlık (Instability)"
         ],
         "a": 2,
-        "desc": "Cohesion, bir modülün 'içsel' odaklılığını ölçer. Yüksek cohesion her zaman tercih edilir."
+        "desc": "Cohesion, modülün içsel elemanlarının ortak bir amaca yönelik odaklanma derecesidir. Yüksek cohesion istenir."
     },
     {
-        "q": "[Sınav Odaklı] Modüller arası bağımlılığı (bir modülün diğerine olan ihtiyacı) ölçen kavram hangisidir?",
+        "q": "Farklı modüller arasındaki bağımlılık derecesini ve bir modüldeki değişikliğin diğerini etkileme oranını ölçen kavram hangisidir?",
         "options": [
             "Cohesion",
             "Coupling (Gevşek/Sıkı Bağlılık)",
-            "Refactoring",
-            "Instability"
+            "Soyutluk (Abstractness)",
+            "Siklomaktik Karmaşıklık"
         ],
         "a": 1,
-        "desc": "Coupling, modüller arası 'dışsal' bağımlılığı ifade eder. Düşük coupling (loose coupling) istenir."
+        "desc": "Coupling, modüller arası dışsal bağımlılığı ölçer. Mimaride düşük coupling (loose coupling) hedeflenir."
     },
     {
-        "q": "[Sınav Odaklı] Bir sınıftaki değişikliğin diğer sınıfın güncellenmesini zorunlu kıldığı bağımlı evrimleşme durumuna ne ad verilir?",
+        "q": "Bir sınıftaki değişikliğin diğer sınıfın güncellenmesini zorunlu kıldığı 'birlikte doğma/evrimleşme' bağımlılığına ne ad verilir?",
         "options": [
             "Connascence",
             "Cohesion",
-            "SRP",
-            "DIP"
+            "Encapsulation",
+            "Abstraction"
         ],
         "a": 0,
-        "desc": "Connascence (birlikte doğma/evrimleşme), sistemin modülerliğini ve bakım maliyetini doğrudan etkileyen bir bağımlılık türüdür."
+        "desc": "Connascence, iki veya daha fazla bileşenin birindeki değişikliğin diğerinde de değişiklik gerektirmesi durumudur."
     },
     {
-        "q": "[Sınav Odaklı] Connascence türlerinden hangisi en tehlikelidir ve en zor tespit edilendir?",
+        "q": "Connascence türlerinden hangisi en tehlikelidir ve statik analiz araçlarıyla kod incelenerek tespit edilmesi en zordur?",
         "options": [
-            "Static Connascence",
-            "Dynamic Connascence (Çalışma Zamanı / Sıralama bağımlılıkları vb.)",
+            "Static Connascence (Name, Type vb.)",
+            "Dynamic Connascence (Execution/Order - Çalışma zamanı sırası vb.)",
             "Algoritmik Connascence",
-            "Hiçbiri"
+            "Kalıtımsal Connascence"
         ],
         "a": 1,
-        "desc": "Dynamic Connascence (örn: Connascence of Execution/Order), çalışma zamanında ortaya çıktığı için kodu inceleyerek kolayca bulunamaz."
+        "desc": "Dynamic Connascence çalışma zamanı davranışına bağlı olduğundan (Örn: A metodunun mutlaka B'den önce çağrılması gerekliliği) tespiti zordur."
     },
     {
-        "q": "[Sınav Odaklı] Buzdağı Metaforuna göre, bir modülün dış dünyaya açık olan ve 'ne işe yaradığını' gösteren su üstündeki kısmına ne ad verilir?",
+        "q": "Buzdağı Metaforuna (Iceberg Metaphor) göre, bir modülün dış dünyaya sunduğu kısım ile gerçekte işin yapıldığı kısım sırasıyla hangileridir?",
         "options": [
-            "İmplementasyon (Body)",
-            "Veritabanı",
-            "Arayüz (Interface)",
-            "Sınıf yapısı"
+            "İmplementasyon (Gövde) ve Arayüz (Interface)",
+            "Veritabanı şeması ve SQL sorguları",
+            "Arayüz (Interface) ve İmplementasyon (Gövde)",
+            "Web sayfası ve Sunucu donanımı"
         ],
         "a": 2,
-        "desc": "Dışa sunulan kısım arayüzdür (interface / contract). Gerçek işin yapıldığı görünmeyen kısım gövdedir (body)."
+        "desc": "Arayüz su üstündeki küçük kısımdır (ne yaptığını söyler), implementasyon ise su altındaki büyük gövdedir (nasıl yaptığını gizler)."
     },
     {
-        "q": "[Sınav Odaklı] Postel Yasası (Robustness Principle) neyi önerir?",
+        "q": "Postel Yasası (Robustness Principle) yazılım bileşenleri arası veri alışverişinde neyi tavsiye eder?",
         "options": [
-            "Sadece kendi bildiğin veriyi gönder.",
-            "Gönderirken muhafazakar (strict), kabul ederken ise esnek/liberal (lenient) ol.",
-            "Hataları kullanıcıya doğrudan göster.",
-            "Tüm fonksiyonları statik yap."
+            "Veri yollarken olabildiğince esnek, veri kabul ederken ise olabildiğince katı ve kısıtlayıcı olun.",
+            "Veri gönderirken muhafazakar/standartlara tam uygun (strict), kabul ederken ise esnek/liberal (lenient) olun.",
+            "Tüm hataları kullanıcıya doğrudan ham haliyle gösterin.",
+            "Sadece JSON formatında veri alışverişi yapın."
         ],
         "a": 1,
-        "desc": "Postel Yasası: 'Be conservative in what you send, be liberal in what you accept.' Dağıtık sistemlerin uyumunu artırır."
+        "desc": "Postel Yasası, dağıtık sistemlerin birbiriyle uyumlu çalışabilmesi için gönderilen verinin katı kurallara uymasını, alınan verinin ise ufak sapmalara toleranslı olmasını söyler."
     },
     {
-        "q": "[Sınav Odaklı] Demeter Yasası (En Az Bilgi İlkesi) neyi savunur?",
+        "q": "Demeter Yasası (Law of Demeter - En Az Bilgi İlkesi) kod yazımında hangisinden kaçınmayı öğütler?",
         "options": [
-            "Bir nesnenin yalnızca yakın arkadaşlarıyla konuşması gerektiğini (zincirleme metot çağrılarından kaçınmak).",
-            "Tüm nesnelerin genel static değişkenlere erişmesini.",
-            "Veritabanına her yerden erişilmesini.",
-            "Sınıfların çok büyük olmasını."
-        ],
-        "a": 0,
-        "desc": "Demeter Yasası, nesnelerin iç yapısını dışarıya sızdırmamasını ve `a.getB().getC().doAction()` gibi zincirlerden kaçınılmasını söyler."
-    },
-    {
-        "q": "[Sınav Odaklı] Modül (Module) ve Bileşen (Component) arasındaki temel fark zamanlama açısından nasıldır?",
-        "options": [
-            "Bileşen derleme zamanında, modül çalışma zamanında var olur.",
-            "Modül geliştirme/derleme zamanında (build-time), Bileşen ise çalışma/dağıtım zamanında (run-time) var olur.",
-            "Her ikisi de sadece yazım aşamasında vardır.",
-            "Hiçbir farkları yoktur."
+            "Sınıfların kalıtım (inheritance) yoluyla türetilmesinden.",
+            "`a.getB().getC().doSomething()` gibi nesne zincirleri oluşturarak iç yapıları sızdırmaktan.",
+            "Metotların parametre almasından.",
+            "Arayüzlerin (interface) implement edilmesinden."
         ],
         "a": 1,
-        "desc": "Modül kod seviyesindeki mantıksal gruplamadır (Java package, C# namespace). Bileşen ise çalışan dağıtık birimdir (Spring Bean, Mikroservis)."
+        "desc": "Demeter Yasası, bir nesnenin sadece kendi doğrudan ilişkili olduğu nesnelerle konuşması gerektiğini savunur (Zincirleme metot çağrılarını önler)."
     },
     {
-        "q": "[Sınav Odaklı] Plansız gelişim, acele güncellemeler sonucu oluşan, karmaşık, sınırları belirsiz ve sürdürülemez yazılım hiyerarşisine ne ad verilir?",
+        "q": "Modüller arası coupling türlerinden hangisi en sıkı (en kötü) bağımlılığa yol açar?",
         "options": [
-            "Microkernel Style",
-            "Big Ball of Mud (Büyük Çamur Topu)",
-            "Clean Architecture",
-            "Layered Architecture"
+            "Data Coupling (Sadece basit parametre geçişi)",
+            "Content/Path Coupling (Bir modülün diğerinin iç yapısına/koduna doğrudan erişmesi)",
+            "Control Coupling (Bir modülün diğerine ne yapacağını parametreyle dikte etmesi)",
+            "Stamp Coupling (Karmaşık veri yapılarının geçirilmesi)"
         ],
         "a": 1,
-        "desc": "Big Ball of Mud, yazılım entropisinin kontrolden çıkmasıyla oluşan en yaygın anti-desendir."
+        "desc": "Content Coupling'de bir modül diğerinin doğrudan iç koduna veya verisine müdahale eder, bağımsızlığı tamamen yok eder."
     },
     {
-        "q": "[Sınav Odaklı] SOLID ilkelerinden 'Liskov Substitution Principle (LSP)' neyi savunur?",
+        "q": "SOLID ilkelerinden 'Interface Segregation Principle (ISP)' neyi hedefler?",
         "options": [
-            "Sınıfların değişime kapalı, gelişime açık olmasını.",
-            "Bir alt sınıfın, üst sınıfın yerine hiçbir hata oluşturmadan sorunsuzca geçebilmesini.",
-            "Arayüzlerin olabildiğince küçük ve özelleşmiş olmasını.",
-            "Her sınıfın tek bir iş yapmasını."
-        ],
-        "a": 1,
-        "desc": "LSP, türetilmiş sınıfların ana sınıfın davranış sözleşmesini (contract) bozmaması gerektiğini belirtir."
-    },
-    {
-        "q": "[Sınav Odaklı] Bir modül içindeki elemanların birbirine ne kadar güçlü bağlandığını ve tek bir amaca hizmet ettiğini belirten ölçü hangisidir?",
-        "options": [
-            "Coupling (Bağımlılık)",
-            "Connascence",
-            "Cohesion (Bağlılık/Tutarlılık)",
-            "Abstracness"
+            "Tüm sınıfların tek bir arayüzden türetilmesini.",
+            "Arayüzlerin olabildiğince büyük tutularak tüm metotları kapsamasını.",
+            "İstemcilerin kullanmadıkları metotları barındıran şişman arayüzlere zorlanmamasını (küçük, özelleşmiş arayüzler).",
+            "Arayüzlerin sadece statik sınıflarda tanımlanmasını."
         ],
         "a": 2,
-        "desc": "Cohesion, bir modülün 'içsel' odaklılığını ölçer. Yüksek cohesion her zaman tercih edilir."
+        "desc": "ISP, büyük ve genel arayüzler yerine, belirli roller ve istemciler için özelleşmiş küçük arayüzler tanımlanmasını önerir."
     },
     {
-        "q": "[Sınav Odaklı] Modüller arası bağımlılığı (bir modülün diğerine olan ihtiyacı) ölçen kavram hangisidir?",
+        "q": "Static Connascence türlerinden biri olan 'Connascence of Type' neyi ifade eder?",
         "options": [
-            "Cohesion",
-            "Coupling (Gevşek/Sıkı Bağlılık)",
-            "Refactoring",
-            "Instability"
+            "İki bileşenin aynı veritabanı tablosuna erişmesini.",
+            "Metot isimlerinin birebir aynı olmasını.",
+            "Bir değişkenin veya parametrenin veri tipinin (örn: Integer) değişmesi durumunda diğer bileşenin de değişmek zorunda kalmasını.",
+            "Sınıfların aynı paket altında bulunmasını."
+        ],
+        "a": 2,
+        "desc": "Type connascence, değişken tiplerinin değişmesiyle ilişkili olan derleme zamanında tespit edilebilen statik bir connascence'tır."
+    },
+    {
+        "q": "Dynamic Connascence türlerinden 'Connascence of Execution' neyi kısıtlar?",
+        "options": [
+            "Kodun çalışma süresini.",
+            "Birden fazla metodun çağrılma sırasının (Örn: Önce initialize(), sonra start()) kritik olmasını.",
+            "Kullanılan CPU çekirdeği sayısını.",
+            "Veritabanı işlemlerinin rollback edilmesini."
         ],
         "a": 1,
-        "desc": "Coupling, modüller arası 'dışsal' bağımlılığı ifade eder. Düşük coupling (loose coupling) istenir."
+        "desc": "Execution/Order connascence, metotların doğru çalışması için belirli bir sırayla çağrılmasını şart koşar."
     },
     {
-        "q": "[Sınav Odaklı] ISO/IEC 25010 standardına göre, yazılımın beklenen işlevleri doğru ve eksiksiz yerine getirme yeteneği hangi kategoridir?",
+        "q": "Yüksek bağlılığa (Cohesion) sahip bir sınıf tasarlamanın yazılıma en büyük faydası hangisidir?",
+        "options": [
+            "Sınıfın daha hızlı derlenmesi.",
+            "Sınıfın kod satırı sayısının (LOC) otomatik olarak azalması.",
+            "Sınıfın kolay anlaşılması, bakımının kolaylaşması ve sadece kendi sorumluluğuna odaklanması.",
+            "Veritabanı bağlantı havuzunu optimize etmesi."
+        ],
+        "a": 2,
+        "desc": "Yüksek Cohesion, sınıf içindeki elemanların tek bir işe odaklanmasını sağlar, bu da bakım ve test edilebilirliği artırır."
+    },
+
+    // Bölüm 4: Mimari Kalite Öznitelikleri (Operational, Structural & Cross-Cutting) (45-59)
+    {
+        "q": "ISO/IEC 25010 kalite standardına göre, yazılımın belirtilen işlevleri doğru, eksiksiz ve uygun şekilde yerine getirme yeteneği hangi kategoridir?",
         "options": [
             "Fonksiyonel Uygunluk (Functional Suitability)",
             "Güvenilirlik (Reliability)",
@@ -505,208 +512,210 @@ const questionsList = [
             "Kullanılabilirlik (Usability)"
         ],
         "a": 0,
-        "desc": "Fonksiyonel uygunluk, sistemin belirtilen gereksinimleri ne kadar karşıladığının ölçüsüdür."
+        "desc": "Fonksiyonel Uygunluk, yazılımın kendisinden beklenen işlevleri ne kadar doğru karşıladığının ölçüsüdür."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin ani yük artışlarında (Örn: Kara Cuma indirimleri) kaynak eklenerek (donanım) kapasitesini artırma yeteneği hangisidir?",
+        "q": "Sistemin ani ve aşırı yük artışlarında (Örn: Kampanya dönemleri) donanım kaynakları eklenerek kapasitesini artırma yeteneği hangisidir?",
         "options": [
-            "Elasticity (Esneklik)",
-            "Scalability (Ölçeklenebilirlik)",
-            "Performance",
-            "Availability"
+            "Esneklik (Elasticity)",
+            "Ölçeklenebilirlik (Scalability)",
+            "Kullanılabilirlik (Usability)",
+            "Kurtarılabilirlik (Recoverability)"
         ],
         "a": 1,
-        "desc": "Ölçeklenebilirlik, sistemin artan yükü (user count, request rate) donanım ekleyerek karşılayabilme kapasitesidir."
+        "desc": "Ölçeklenebilirlik (Scalability), sistemin artan yükü donanım ekleyerek (yatay veya dikey) kaldırabilme potansiyelidir."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin yük azaldığında kaynakları geri bırakıp, yük arttığında dinamik ve otomatik olarak (saniyeler içinde) genişleyebilmesi nedir?",
+        "q": "Bulut bilişim sistemlerinde, yük azaldığında kaynakların geri bırakılması ve yük arttığında saniyeler içinde dinamik ve otomatik kaynak genişletilmesi nedir?",
         "options": [
-            "Scalability",
-            "Elasticity (Esneklik)",
-            "Reliability",
-            "Auditability"
+            "Ölçeklenebilirlik (Scalability)",
+            "Esneklik (Elasticity)",
+            "Taşınabilirlik (Portability)",
+            "Sürdürülebilirlik (Maintainability)"
         ],
         "a": 1,
-        "desc": "Esneklik, bulut sistemlerindeki anlık ve otomatik kaynak daraltma/genişletme (auto-scaling) yeteneğidir."
+        "desc": "Esneklik (Elasticity), kaynakların talebe göre anlık ve otomatik olarak daralıp genişleyebilmesidir (Örn: Auto-scaling)."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin bir çökme veya hata anında verileri kaybetmeden en kısa sürede ayağa kalkabilme yeteneğine ne ad verilir?",
+        "q": "Sistemin bir çökme veya fiziksel felaket (disaster) anında verileri kaybetmeden en kısa sürede (MTTR) ayağa kalkabilme yeteneğine ne ad verilir?",
         "options": [
-            "Recoverability (Kurtarılabilirlik)",
-            "Maintainability",
-            "Performance",
-            "Extensibility"
+            "Kurtarılabilirlik (Recoverability)",
+            "Sürdürülebilirlik (Maintainability)",
+            "Performans (Performance)",
+            "Test Edilebilirlik (Testability)"
         ],
         "a": 0,
-        "desc": "Kurtarılabilirlik (Disaster Recovery/MTTR), sistemin felaket anından sonra tekrar çalışır hale gelebilmesidir."
+        "desc": "Kurtarılabilirlik (Recoverability / Disaster Recovery), sistemin arıza sonrası tekrar çalışır duruma gelme kapasitesidir."
     },
     {
-        "q": "[Sınav Odaklı] Geliştiricilerin kodda değişiklik yapma, hata bulma ve yeni özellik ekleme kolaylığını belirleyen yapısal karakteristik hangisidir?",
+        "q": "Geliştiricilerin kodda değişiklik yapabilme, hataları bulabilme ve yeni özellikleri kolayca ekleyebilmesini belirleyen yapısal kalite özniteliği hangisidir?",
         "options": [
-            "Testability",
-            "Maintainability (Sürdürülebilirlik)",
-            "Portability",
-            "Reliability"
+            "Test Edilebilirlik (Testability)",
+            "Sürdürülebilirlik (Maintainability)",
+            "Taşınabilirlik (Portability)",
+            "Birlikte Çalışabilirlik (Interoperability)"
         ],
         "a": 1,
-        "desc": "Sürdürülebilirlik (Maintainability), yazılımın yaşam döngüsü boyunca bakım ve geliştirme maliyetini belirler."
+        "desc": "Sürdürülebilirlik (Maintainability), kodun yaşam döngüsü boyunca bakım, refactoring ve geliştirme maliyetlerini doğrudan belirler."
     },
     {
-        "q": "[Sınav Odaklı] Uygulamanın farklı işletim sistemlerine (Linux, Windows, macOS) veya bulut sağlayıcılarına kolayca taşınabilmesi yeteneği hangisidir?",
+        "q": "Uygulamanın farklı işletim sistemlerine (Linux, Windows) veya bulut sağlayıcılarına (AWS, Azure) minimum kod değişikliğiyle taşınabilmesi yeteneği hangisidir?",
         "options": [
-            "Interoperability",
-            "Extensibility",
-            "Portability (Taşınabilirlik)",
-            "Scalability"
+            "Birlikte Çalışabilirlik (Interoperability)",
+            "Genişletilebilirlik (Extensibility)",
+            "Taşınabilirlik (Portability)",
+            "Ölçeklenebilirlik (Scalability)"
         ],
         "a": 2,
-        "desc": "Taşınabilirlik (Portability), uygulamanın çalışma ortamından bağımsız olma derecesidir."
+        "desc": "Taşınabilirlik (Portability), uygulamanın platformdan bağımsız olarak farklı ortamlarda çalışabilme derecesidir."
     },
     {
-        "q": "[Sınav Odaklı] Sisteme sızma girişimlerini engelleme, veriyi şifreleme ve yetkisiz erişimleri kısıtlama yeteneği hangi alana girer?",
+        "q": "Sisteme yönelik yetkisiz sızma girişimlerini engelleme, kullanıcı verilerini koruma ve kimlik doğrulamayı yönetme yeteneği hangi alana girer?",
         "options": [
-            "Security (Güvenlik)",
-            "Privacy",
-            "Auditability",
-            "Reliability"
+            "Güvenlik (Security)",
+            "Gizlilik (Privacy)",
+            "Denetlenebilirlik (Auditability)",
+            "Güvenilirlik (Reliability)"
         ],
         "a": 0,
-        "desc": "Güvenlik (Security), sistem verilerinin ve kaynaklarının bütünlüğünü korumayı hedefler."
+        "desc": "Güvenlik (Security), sistem verilerinin ve kaynaklarının bütünlüğünü, gizliliğini ve erişilebilirliğini korur."
     },
     {
-        "q": "[Sınav Odaklı] Kritik yasal işlemlerin veya finansal hareketlerin geçmişe dönük olarak kimin tarafından yapıldığının izlenebilmesi özelliği hangisidir?",
+        "q": "Finansal işlemler yürüten bir sistemde, kritik hareketlerin geçmişe dönük olarak kimin tarafından ne zaman yapıldığının izlenebilmesi özelliği hangisidir?",
         "options": [
-            "Privacy",
-            "Auditability (Denetlenebilirlik)",
-            "Interoperability",
-            "Elasticity"
+            "Gizlilik (Privacy)",
+            "Denetlenebilirlik (Auditability)",
+            "Birlikte Çalışabilirlik (Interoperability)",
+            "Esneklik (Elasticity)"
         ],
         "a": 1,
-        "desc": "Denetlenebilirlik (Auditability/Traceability), sistemdeki önemli olayların loglanıp takip edilebilmesini sağlar."
+        "desc": "Denetlenebilirlik (Auditability / Traceability), yasal ve operasyonel takip için kritik sistem eylemlerinin loglanmasıdır."
     },
     {
-        "q": "[Sınav Odaklı] Mimari karakteristiklerin belirlenmesindeki en büyük zorluk nedir?",
+        "q": "Kalite özniteliklerinin (Quality Attributes) belirlenmesi ve mimari tasarımdaki en büyük mühendislik zorluğu nedir?",
         "options": [
-            "Sadece tek bir karakteristiğin seçilebilmesi.",
-            "Karakteristiklerin birbiriyle çelişmesi ve trade-off gerektirmesi (örn: Güvenlik artarsa Performans düşebilir).",
-            "Donanım maliyetleri.",
-            "Kodlama dillerinin sınırlamaları."
+            "Kalite özniteliklerinin hiçbir zaman ölçülemez olması.",
+            "Kalite özniteliklerinin birbiriyle çelişmesi ve ödünleşme (trade-off) gerektirmesi (Örn: Güvenlik seviyesi çok artarsa Performans düşebilir).",
+            "Yazılım geliştirme dillerinin bu özellikleri desteklememesi.",
+            "Donanım üreticilerinin kalite standartlarını engellemesi."
         ],
         "a": 1,
-        "desc": "Mimaride tüm kalite özniteliklerini aynı anda en tepeye çıkarmak imkansızdır. Birini seçmek diğerinden ödün vermeyi gerektirir."
+        "desc": "Tüm kalite özniteliklerini aynı anda en üst düzeye çıkarmak imkansızdır. Birini artırmak genellikle diğerinden ödün vermeyi gerektirir."
     },
     {
-        "q": "[Sınav Odaklı] Bir e-ticaret sepetinin 7/24 kesintisiz çalışması hangi operasyonel kalite özniteliğidir?",
+        "q": "Sistemin belirli bir zaman diliminde arızalanmadan doğru şekilde çalışma olasılığını ifade eden karakteristik hangisidir?",
         "options": [
-            "Scalability",
-            "Maintainability",
-            "Availability (Erişilebilirlik)",
-            "Elasticity"
-        ],
-        "a": 2,
-        "desc": "Erişilebilirlik (Availability), sistemin çalışma süresinin toplam süreye oranıdır (%99.9 vb.)."
-    },
-    {
-        "q": "[Sınav Odaklı] ISO/IEC 25010 standardına göre, yazılımın beklenen işlevleri doğru ve eksiksiz yerine getirme yeteneği hangi kategoridir?",
-        "options": [
-            "Fonksiyonel Uygunluk (Functional Suitability)",
+            "Erişilebilirlik (Availability)",
             "Güvenilirlik (Reliability)",
             "Sürdürülebilirlik (Maintainability)",
-            "Kullanılabilirlik (Usability)"
+            "Ölçeklenebilirlik (Scalability)"
+        ],
+        "a": 1,
+        "desc": "Güvenilirlik (Reliability / MTBF), sistemin hata vermeden sürekli çalışabilme olasılığı ve kararlılığıdır."
+    },
+    {
+        "q": "Bir web API'sinin gelen isteklere 100 milisaniyenin altında yanıt vermesi (response time) hangi kalite özniteliğidir?",
+        "options": [
+            "Performans / Zaman Davranışı (Performance)",
+            "Güvenilirlik (Reliability)",
+            "Erişilebilirlik (Availability)",
+            "Esneklik (Elasticity)"
         ],
         "a": 0,
-        "desc": "Fonksiyonel uygunluk, sistemin belirtilen gereksinimleri ne kadar karşıladığının ölçüsüdür."
+        "desc": "Zaman davranışı ve kaynak kullanımı (CPU/RAM/Network) performansı tanımlayan metriklerdir."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin ani yük artışlarında (Örn: Kara Cuma indirimleri) kaynak eklenerek (donanım) kapasitesini artırma yeteneği hangisidir?",
+        "q": "Sistemin dışarıdaki diğer sistemlerle standart protokoller üzerinden sorunsuz veri alışverişi yapabilmesi yeteneğine ne ad verilir?",
         "options": [
-            "Elasticity (Esneklik)",
-            "Scalability (Ölçeklenebilirlik)",
-            "Performance",
-            "Availability"
+            "Taşınabilirlik (Portability)",
+            "Birlikte Çalışabilirlik (Interoperability)",
+            "Genişletilebilirlik (Extensibility)",
+            "Güvenilirlik (Reliability)"
         ],
         "a": 1,
-        "desc": "Ölçeklenebilirlik, sistemin artan yükü (user count, request rate) donanım ekleyerek karşılayabilme kapasitesidir."
+        "desc": "Interoperability, farklı heterojen sistemlerin birbiriyle entegre olabilme ve konuşabilme yeteneğidir."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin yük azaldığında kaynakları geri bırakıp, yük arttığında dinamik ve otomatik olarak (saniyeler içinde) genişleyebilmesi nedir?",
+        "q": "Geliştiricilerin yazılan kod bloklarını veya fonksiyonları kolayca test edebilme ve test otomasyonuna tabi tutabilme kolaylığı hangisidir?",
         "options": [
-            "Scalability",
-            "Elasticity (Esneklik)",
-            "Reliability",
-            "Auditability"
+            "Sürdürülebilirlik (Maintainability)",
+            "Test Edilebilirlik (Testability)",
+            "Analiz Edilebilirlik (Analyzability)",
+            "Fonksiyonel Uygunluk"
         ],
         "a": 1,
-        "desc": "Esneklik, bulut sistemlerindeki anlık ve otomatik kaynak daraltma/genişletme (auto-scaling) yeteneğidir."
+        "desc": "Test Edilebilirlik (Testability), sistemin hatalarının test senaryolarıyla ne kadar kolay ortaya çıkarılabileceğinin ölçüsüdür."
     },
     {
-        "q": "[Sınav Odaklı] Sistemin bir çökme veya hata anında verileri kaybetmeden en kısa sürede ayağa kalkabilme yeteneğine ne ad verilir?",
+        "q": "Kullanıcının uygulamayı kullanırken hata yapmasını engelleme, kolay öğrenme ve memnuniyet seviyesi hangi karakteristik altındadır?",
         "options": [
-            "Recoverability (Kurtarılabilirlik)",
-            "Maintainability",
-            "Performance",
-            "Extensibility"
+            "Kullanılabilirlik (Usability)",
+            "Sürdürülebilirlik (Maintainability)",
+            "Fonksiyonel Uygunluk",
+            "Güvenilirlik"
         ],
         "a": 0,
-        "desc": "Kurtarılabilirlik (Disaster Recovery/MTTR), sistemin felaket anından sonra tekrar çalışır hale gelebilmesidir."
+        "desc": "Usability (Kullanılabilirlik), kullanıcı deneyimini (UX), arayüz kolaylığını ve öğrenilebilirliği kapsar."
     },
     {
-        "q": "[Sınav Odaklı] Geliştiricilerin kodda değişiklik yapma, hata bulma ve yeni özellik ekleme kolaylığını belirleyen yapısal karakteristik hangisidir?",
+        "q": "Sistemin sadece yetkili kullanıcıların kişisel verilerine erişmesini sağlama ve veri ifşasını engelleme yeteneği hangisidir?",
         "options": [
-            "Testability",
-            "Maintainability (Sürdürülebilirlik)",
-            "Portability",
-            "Reliability"
+            "Denetlenebilirlik (Auditability)",
+            "Gizlilik (Privacy)",
+            "Güvenilirlik (Reliability)",
+            "Esneklik (Elasticity)"
         ],
         "a": 1,
-        "desc": "Sürdürülebilirlik (Maintainability), yazılımın yaşam döngüsü boyunca bakım ve geliştirme maliyetini belirler."
+        "desc": "Privacy (Veri Gizliliği), kullanıcı bilgilerinin yasalara (GDPR, KVKK) uygun şekilde korunması ve yetkisiz paylaşılmamasını sağlar."
     },
+
+    // Bölüm 5: Metrikler (Cyclomatic, LCOM, Distance) & Fitness Fonksiyonları (ArchUnit) (60-69)
     {
-        "q": "[Sınav Odaklı] Bir kod bloğunun karmaşıklığını, kod içindeki bağımsız karar yollarının sayısını ölçerek bulan metrik hangisidir?",
+        "q": "Bir kod bloğunun içindeki bağımsız karar yollarının (dallanmalarının) sayısını ölçen metrik hangisidir?",
         "options": [
-            "LCOM",
-            "Cyclomatic Complexity (Siklomaktik Karmaşıklık)",
-            "Halstead Complexity",
-            "Distance from Main Sequence"
+            "Lack of Cohesion in Methods (LCOM)",
+            "Siklomaktik Karmaşıklık (Cyclomatic Complexity)",
+            "Distance from Main Sequence (Ana Diziden Uzaklık)",
+            "Kararsızlık (Instability)"
         ],
         "a": 1,
-        "desc": "Siklomaktik Karmaşıklık, kontrol akış grafiğindeki dallanma sayısını ölçer. Düşük değerler daha kolay test edilir."
+        "desc": "Siklomaktik Karmaşıklık, kodun kontrol akış grafiğindeki döngü ve karar noktalarını (if, for vb.) ölçer."
     },
     {
-        "q": "[Sınav Odaklı] Cyclomatic Complexity hesaplama formülü M = E - N + 2P ifadesindeki E ve N neyi temsil eder?",
+        "q": "Siklomaktik Karmaşıklık hesaplama formülü M = E - N + 2P ifadesindeki E ve N harfleri sırasıyla neyi temsil eder?",
         "options": [
             "E = Sınıf sayısı, N = Metot sayısı",
             "E = Grafikteki kenarlar (edges), N = Düğümler (nodes)",
             "E = Hata sayısı, N = Satır sayısı",
-            "E = Veritabanı tabloları, N = Bağlantılar"
+            "E = Veritabanı tabloları, N = İlişkiler"
         ],
         "a": 1,
-        "desc": "E (edges) kontrol akış çizgilerini, N (nodes) ise karar ve işlem bloklarını (düğümleri) temsil eder."
+        "desc": "E (edges) kontrol akış yollarını/kenarları, N (nodes) ise karar ve işlem bloklarını/düğümleri temsil eder."
     },
     {
-        "q": "[Sınav Odaklı] LCOM (Lack of Cohesion in Methods) değeri sıfıra yakın olduğunda ne anlama gelir?",
+        "q": "LCOM (Lack of Cohesion in Methods) metriğinin değerinin sıfıra yakın (0) olması neyi ifade eder?",
         "options": [
-            "Sınıfın cohesion değerinin çok düşük ve parçalanması gerektiği.",
-            "Sınıfın metotlarının ortak değişkenleri yoğun kullandığı, yani yüksek cohesion'a (tutarlılığa) sahip olduğu.",
-            "Sınıfın hiç çalışmadığı.",
-            "Sınıfta çok fazla hata olduğu."
+            "Sınıfın cohesion değerinin çok düşük olduğunu ve bölünmesi gerektiğini.",
+            "Sınıfın metotlarının ortak değişkenleri yoğun şekilde kullandığını, yani yüksek cohesion'a (bağlılığa) sahip olduğunu.",
+            "Sınıfta hiçbir metot bulunmadığını.",
+            "Sınıfın çalışma zamanında bellek hatası fırlattığını."
         ],
         "a": 1,
-        "desc": "LCOM, metotların ortak alanları kullanmama derecesidir. Sıfır veya sıfıra yakın olması metotların uyumlu çalıştığını (cohesive) gösterir."
+        "desc": "LCOM, metotların ortak değişkenleri kullanmama derecesidir. Sıfır veya sıfıra yakın olması, sınıfın son derece cohesive (tutarlı/odaklanmış) olduğunu gösterir."
     },
     {
-        "q": "[Sınav Odaklı] Mimaride Ana Diziden Uzaklık (Distance from Main Sequence) metriğinin sıfır olması neyi ifade eder?",
+        "q": "Mimaride Ana Diziden Uzaklık (Distance from Main Sequence) metriğinin D = 0 olması neyi ifade eder?",
         "options": [
-            "Sınıfın gereksiz olduğunu.",
-            "Sistemin çökebileceğini.",
+            "Sınıfın gereksiz yazıldığını.",
+            "Sistemin çökmek üzere olduğunu.",
             "Soyutluk (Abstractness) ile Kararsızlık (Instability) dengesinin ideal olduğunu.",
-            "Sistemde hiç soyut sınıf olmadığını."
+            "Hiçbir modülün bu sınıfa erişemediğini."
         ],
         "a": 2,
-        "desc": "D = |A + I - 1| formülüyle hesaplanır. D=0 ise soyutluk ve kararsızlık dengededir. D=1'e yaklaştıkça 'Gereksiz Bölge' veya 'Acı Bölgesi'ne girilir."
+        "desc": "D = |A + I - 1| formülünde D=0 olması, soyutlama derecesi ile kararsızlık (bağımlılık) oranının mükemmel dengede olduğunu gösterir."
     },
     {
-        "q": "[Sınav Odaklı] Instability (Kararsızlık) metriği nasıl hesaplanır?",
+        "q": "Instability (Kararsızlık) metriği nasıl hesaplanır?",
         "options": [
             "I = Fan-in / (Fan-in + Fan-out)",
             "I = Fan-out / (Fan-in + Fan-out)",
@@ -714,76 +723,67 @@ const questionsList = [
             "I = 1 - Abstractness"
         ],
         "a": 1,
-        "desc": "Kararsızlık (I), dışa giden bağımlılıkların (Fan-out) toplam bağımlılıklara (Fan-in + Fan-out) oranıdır. I=1 kararsız, I=0 istikrarlıdır."
+        "desc": "Kararsızlık (I), dışa giden bağımlılıkların (Fan-out) toplam bağımlılıklara (Fan-in + Fan-out) oranıdır."
     },
     {
-        "q": "[Sınav Odaklı] Kararsızlık (Instability) değeri I = 0 olan bir modül için hangisi doğrudur?",
+        "q": "Kararsızlık (Instability) değeri I = 0 olan bir modül için hangisi doğrudur?",
         "options": [
             "Başka hiçbir modül bu modüle bağımlı değildir.",
-            "Tamamen kararsızdır, her an değişebilir.",
-            "Dışarıya hiç bağımlılığı yoktur, oldukça istikrarlıdır (stable) ve değişmesi zordur.",
-            "Kullanılamaz durumdadır."
+            "Modül tamamen kararsızdır ve sürekli değişmesi beklenir.",
+            "Modülün dışarıya hiç bağımlılığı yoktur, oldukça istikrarlıdır (stable) ve değişmesi zordur.",
+            "Modülün derlenmesi imkansızdır."
         ],
         "a": 2,
-        "desc": "I = 0 olması Fan-out = 0 demektir. Yani bu modül dışarıya bağımlı değildir, diğer modüller ona bağımlıdır."
+        "desc": "I=0 olması Fan-out=0 demektir. Yani bu modül dışarıya bağımlı değildir, diğer modüller ona bağımlıdır. Oldukça istikrarlıdır (stable)."
     },
     {
-        "q": "[Sınav Odaklı] Mimari standartların korunmasını sağlamak amacıyla derleme (build) veya test süreçlerinde sürekli compliance denetimi yapan mekanizma hangisidir?",
+        "q": "Mimari standartların zamanla bozulmasını ve teknik borç birikmesini engellemek amacıyla sürekli denetim yapan otomatik mekanizma hangisidir?",
         "options": [
-            "Unit Test",
-            "Integration Test",
-            "Architectural Fitness Functions (Mimari Uygunluk Fonksiyonları)",
-            "SonarQube"
+            "Birim Testler (Unit Tests)",
+            "Entegrasyon Testleri (Integration Tests)",
+            "Mimari Uygunluk Fonksiyonları (Architectural Fitness Functions)",
+            "Kod Formatlama Araçları (Prettier/Linter)"
         ],
         "a": 2,
-        "desc": "Fitness Fonksiyonları, mimari karakteristiklerin ve kısıtlamaların zaman içinde bozulmasını engellemek için kurulan otomatik testlerdir."
+        "desc": "Fitness fonksiyonları, mimari karakteristiklerin ve tasarım kurallarının korunmasını sağlayan otomatik test mekanizmalarıdır."
     },
     {
-        "q": "[Sınav Odaklı] Java ekosisteminde mimari kuralları (örn: 'controller paketindeki sınıflar service paketini çağırmalı ama tersi olmamalı') test etmek için kullanılan kütüphane hangisidir?",
+        "q": "Java ekosisteminde mimari kuralları (Örn: 'Controller sınıfları doğrudan Repository çağırmamalıdır') birim test olarak yazmamızı sağlayan kütüphane hangisidir?",
         "options": [
             "JUnit",
-            "Mockito",
             "ArchUnit",
-            "Log4j"
-        ],
-        "a": 2,
-        "desc": "ArchUnit, Java sınıfları ve paketleri arasındaki mimari kuralları birim test olarak yazmamızı sağlayan popüler bir kütüphanedir."
-    },
-    {
-        "q": "[Sınav Odaklı] Fitness fonksiyonları hangi aşamada çalıştırılarak teknik borç (technical debt) birikmesi engellenmelidir?",
-        "options": [
-            "Sadece canlıya çıktıktan (production) aylar sonra.",
-            "CI/CD (Sürekli Entegrasyon) derleme hattı (build pipeline) üzerinde her kod gönderiminde.",
-            "Sadece lokal bilgisayarda elle tetiklendiğinde.",
-            "Hiçbir zaman."
+            "Mockito",
+            "Spring Boot Test"
         ],
         "a": 1,
-        "desc": "Otomatik fitness fonksiyonları CI/CD hatlarında her commit'te çalıştırılarak mimari bozulmalar anında engellenir."
+        "desc": "ArchUnit, Java sınıfları, paketleri ve katmanları arasındaki mimari kuralları doğrulamak için özel tasarlanmış bir test kütüphanesidir."
     },
     {
-        "q": "[Sınav Odaklı] Distance metriğinde 'Zone of Pain (Acı Bölgesi)' neresidir?",
+        "q": "Fitness fonksiyonları, teknik borç (technical debt) birikmesini engellemek için yazılım sürecinin hangi aşamasında çalıştırılmalıdır?",
         "options": [
-            "Soyutluğu çok yüksek, bağımlılığı hiç olmayan bölge.",
-            "Soyutluğu sıfır (tam somut) ama kararsızlığı da sıfır (tam istikrarlı/stable) olan, yani değiştirilmesi aşırı zor olan katı bölge.",
-            "Gereksiz sınıfların olduğu bölge.",
-            "Hatalı kodların olduğu bölge."
+            "Sadece proje canlıya çıktıktan aylar sonra manuel tetiklenerek.",
+            "CI/CD (Sürekli Entegrasyon) derleme hattı (build pipeline) üzerinde her kod gönderiminde otomatik olarak.",
+            "Sadece yazılım mimarının kişisel bilgisayarında istendiğinde.",
+            "Hiçbir zaman; manuel denetim her zaman yeterlidir."
         ],
         "a": 1,
-        "desc": "Acı Bölgesi (A=0, I=0), değiştirilmesi çok zor olan ama herkesin bağımlı olduğu somut kütüphanelerin bulunduğu yerdir. (Örn: Java database driver)."
+        "desc": "Otomatik fitness fonksiyonlarının CI/CD hatlarında her commit/push işleminde çalıştırılması mimari erozyonu anında önler."
     },
     {
-        "q": "[Sınav Odaklı] Bileşen Tabanlı Düşünmede (Component-Based Thinking) bir bileşenin en önemli özelliği nedir?",
+        "q": "Distance metriğinde 'Zone of Pain (Acı Bölgesi)' olarak adlandırılan bölge (A=0, I=0) neleri tanımlar?",
         "options": [
-            "Yalnızca tek bir dosyadan oluşması.",
-            "Dış dünyaya iyi tanımlanmış bir arayüz (interface) sunması ve bağımsız deploy edilebilmesi.",
-            "Veritabanını doğrudan yönetmesi.",
-            "Kullanıcı arayüzünü (HTML) içermesi."
+            "Soyutluğu çok yüksek ama bağımlılığı olmayan sınıfları.",
+            "Soyutluğu sıfır (somut) ama kararsızlığı sıfır (tam istikrarlı/stable) olan, yani değiştirilmesi aşırı zor olan katı bölgeyi.",
+            "Gereksiz yazılmış sınıfları.",
+            "Sürekli hata veren ve çöken kod bloklarını."
         ],
         "a": 1,
-        "desc": "Bileşenler, sistemin sınırları belirli, tak-çıkar yapılabilen ve arayüzler üzerinden haberleşen yapı taşlarıdır."
+        "desc": "Acı Bölgesindeki kodlar somuttur (A=0) ve herkes onlara bağımlıdır (I=0). Bu yüzden bu kodlarda değişiklik yapmak sistemi kırabilir (Örn: Veritabanı sürücüleri)."
     },
+
+    // Bölüm 6: Bileşen Tabanlı Düşünme & Bileşen Bölümleme (Technical vs Domain) (70-79)
     {
-        "q": "[Sınav Odaklı] Bileşenleri katmanlara göre (Sunum, İş mantığı, Veri erişim) ayırma stratejisi hangisidir?",
+        "q": "Yazılım bileşenlerini katmanlara göre (Controller, Service, Repository / Presentation, Business, Database) gruplama stratejisi hangisidir?",
         "options": [
             "Domain Partitioning (Alan Odaklı Bölümleme)",
             "Technical Partitioning (Teknik Bölümleme)",
@@ -791,10 +791,10 @@ const questionsList = [
             "Hybrid Partitioning"
         ],
         "a": 1,
-        "desc": "Teknik bölümlemede sınıflar rollerine göre (Controller, Service, Repository) paketlenir."
+        "desc": "Teknik bölümleme (technical partitioning), sınıfları teknik rollerine ve sorumluluklarına göre katmanlar halinde paketler."
     },
     {
-        "q": "[Sınav Odaklı] Bileşenleri iş alanlarına ve bounded context'lere göre (Ödeme, Katalog, Sipariş) ayırma stratejisi hangisidir?",
+        "q": "Bileşenleri iş alanlarına ve iş yeteneklerine göre (Ödeme, Sepet, Sipariş, Katalog) ayırma stratejisi hangisidir?",
         "options": [
             "Technical Partitioning",
             "Domain Partitioning (Alan Odaklı Bölümleme)",
@@ -802,164 +802,177 @@ const questionsList = [
             "Horizontal Partitioning"
         ],
         "a": 1,
-        "desc": "Domain partitioning, bileşenleri iş yeteneklerine (business capabilities) göre gruplar. Mikroservislerin temelidir."
+        "desc": "Alan odaklı bölümleme (domain partitioning), bileşenleri iş yeteneklerine (business capabilities) göre gruplar ve mikroservislerin temelidir."
     },
     {
-        "q": "[Sınav Odaklı] Technical Partitioning (Teknik Bölümleme) yaklaşımının en büyük dezavantajı nedir?",
+        "q": "Technical Partitioning (Teknik Bölümleme) yaklaşımının en büyük dezavantajı aşağıdakilerden hangisidir?",
         "options": [
-            "Teknolojilerin birbiriyle konuşamaması.",
-            "Bir iş özelliğindeki (feature) değişikliğin tüm katmanları (presentation, business, database) etkilemesi ve koordinasyon yükü yaratması.",
-            "Paket yapısının çok küçük olması.",
-            "Sadece Java'da çalışması."
+            "Teknolojik entegrasyonların yapılamaması.",
+            "Tek bir iş özelliğindeki (feature) değişikliğin tüm katmanları (yatayda controller, service, repository) etkilemesi ve koordinasyon yükü.",
+            "Paket yapılarının çok küçük olması.",
+            "Sadece belirli dillerde uygulanabilmesi."
         ],
         "a": 1,
-        "desc": "Teknik bölümlemede bir değişiklik yapmak yatayda tüm katmanlara dokunmayı gerektirir, deployment riskini artırır."
+        "desc": "Teknik bölümlemede bir değişiklik yapmak yatayda tüm katmanlara dokunmayı gerektirir, deployment riskini ve ekipler arası koordinasyonu artırır."
     },
     {
-        "q": "[Sınav Odaklı] Domain Partitioning (Alan Odaklı Bölümleme) yaklaşımının en büyük avantajı nedir?",
+        "q": "Domain Partitioning (Alan Odaklı Bölümleme) yaklaşımının en büyük mimari avantajı nedir?",
         "options": [
-            "Katmanların birbirine çok sıkı bağlanması.",
-            "Her iş alanının (sipariş, ödeme vb.) kendi içinde bağımsız geliştirilip, test edilip deploy edilebilmesi (lokalizasyon).",
-            "Daha az kod satırı içermesi.",
+            "Katmanların birbirine sıkı bağlanmasını kolaylaştırması.",
+            "Her iş alanının (Örn: Ödeme) kendi içinde bağımsız geliştirilip, test edilip deploy edilebilmesi (lokalizasyon ve otonomi).",
+            "Yazılan kod satırı sayısını büyük oranda azaltması.",
             "Veritabanı bağlantı hızını artırması."
         ],
         "a": 1,
-        "desc": "İş alanına göre bölme, ekiplerin kendi domainlerine odaklanmasını sağlar ve mikroservislere geçişi kolaylaştırır."
+        "desc": "İş alanına göre bölme, ekiplerin kendi domainlerine odaklanmasını sağlar ve mikroservis gibi bağımsız deploy edilebilir yapılara geçişi kolaylaştırır."
     },
     {
-        "q": "[Sınav Odaklı] Bir mimarın bileşen sınırlarını belirlerken aşırı küçük bileşenler tasarlamasının (over-partitioning) riski nedir?",
+        "q": "Bir mimarın bileşen sınırlarını belirlerken aşırı küçük bileşenler tasarlamasının (over-partitioning / high granularity) riski nedir?",
         "options": [
-            "Bileşenlerin hiç çalışmaması.",
+            "Bileşenlerin hiçbir şekilde derlenememesi.",
             "Bileşenler arası ağ/iletişim trafiğinin aşırı artması, entegrasyon karmaşıklığı ve performans kaybı.",
-            "Kodun daha anlaşılır olması.",
+            "Kodun okunabilirliğinin tamamen kaybolması.",
             "Bellek tüketiminin sıfıra inmesi."
         ],
         "a": 1,
-        "desc": "Aşırı parçalama (granularity sorunu), servislerin sürekli birbiriyle konuşmak zorunda kaldığı 'chatty' yapılara yol açar."
+        "desc": "Aşırı parçalama (granularity sorunu), servislerin sürekli birbiriyle konuşmak zorunda kaldığı 'chatty' yapılara ve ağ gecikmelerine yol açar."
     },
     {
-        "q": "[Sınav Odaklı] Bileşenlerin tespiti (Component Identification) sürecinde ilk adım genellikle hangisidir?",
+        "q": "Bileşenlerin tespiti (Component Identification) sürecinde ilk adım genellikle aşağıdakilerden hangisidir?",
         "options": [
             "Doğrudan kod yazmaya başlamak.",
-            "İlk mimari stili belirlemek.",
+            "Nihai mimari stili seçmek.",
             "Başlangıç bileşenlerini (initial components) tanımlamak ve iş gereksinimlerini analiz etmek.",
-            "Donanım satın almak."
+            "Donanım ve sunucu kaynaklarını kiralamak."
         ],
         "a": 2,
-        "desc": "Önce gereksinimler ve aktörler analiz edilerek sistemin kaba yapı taşları (initial components) belirlenir."
+        "desc": "Önce iş gereksinimleri ve aktörler analiz edilerek sistemin kaba yapı taşları (initial components) belirlenir."
     },
     {
-        "q": "[Sınav Odaklı] Conway Yasası (Conway's Law) yazılım mimarisi ve bileşen tasarımı hakkında ne söyler?",
+        "q": "Conway Yasası (Conway's Law) yazılım mimarisi ve organizasyon yapısı hakkında ne söyler?",
         "options": [
-            "En pahalı donanım en iyi sonucu verir.",
-            "Yazılım mimarileri, onu geliştiren organizasyonların iletişim yapısını yansıtır.",
-            "Tüm bileşenler aynı dilde yazılmalıdır.",
-            "Veritabanı hızı donanıma bağlıdır."
+            "En yüksek bütçeli donanım her zaman en iyi yazılımı üretir.",
+            "Yazılım mimarileri, onu geliştiren organizasyonların iletişim yapılarını kopyalar.",
+            "Tüm yazılım bileşenleri aynı dilde yazılmalıdır.",
+            "Yazılım kalitesi geliştirici sayısıyla doğru orantılıdır."
         ],
         "a": 1,
-        "desc": "Conway Yasası: 'Sistem tasarlayan organizasyonlar, kendi iletişim yapılarını kopyalayan tasarımlar üretirler.' Ekip yapısı mimariyi belirler."
+        "desc": "Conway Yasası: 'Sistem tasarlayan organizasyonlar, kendi iletişim yapılarını kopyalayan tasarımlar üretirler.' Ekip yapısı mimariyi doğrudan şekillendirir."
     },
     {
-        "q": "[Sınav Odaklı] Bileşen tasarımı sürecinde geri bildirim döngüsünün (feedback loop) önemi nedir?",
+        "q": "Bileşen tasarımı sürecinde geri bildirim döngüsünün (feedback loop) mimar üzerindeki en önemli işlevi nedir?",
         "options": [
-            "Bileşenlerin boyutunun ve sınırlarının zamanla gerçek dünya testlerine göre optimize edilmesini sağlamak.",
-            "Kodun otomatik silinmesini engellemek.",
-            "Ekiplerin kod yazmasını yavaşlatmak.",
-            "İnternet hızını ölçmek."
+            "Bileşenlerin boyutunun ve sınırlarının zamanla gerçek dünya gereksinimlerine göre ayarlanmasını (refining granularity) sağlamak.",
+            "Yazılan kodların otomatik silinmesini önlemek.",
+            "Geliştirici ekiplerin kod yazma hızını yavaşlatarak kontrol sağlamak.",
+            "Ağ hızını ve internet bant genişliğini ölçmek."
         ],
         "a": 0,
-        "desc": "Bileşen sınırları ilk seferde mükemmel olamaz. Geri bildirim döngüleriyle granülerlik ayarlanır."
+        "desc": "Bileşen sınırları ilk seferde mükemmel olamaz. Geri bildirim döngüleriyle granülerlik ve sınırlar optimize edilir."
     },
     {
-        "q": "[Sınav Odaklı] Domain-Driven Design (DDD) içindeki hangi kavram doğrudan bir domain bileşeninin sınırını belirler?",
+        "q": "Domain-Driven Design (DDD) yaklaşımındaki hangi kavram doğrudan bağımsız bir domain bileşeninin (veya mikroservisin) sınırını çizer?",
         "options": [
-            "Entity",
-            "Value Object",
+            "Entity (Varlık)",
+            "Value Object (Değer Nesnesi)",
             "Bounded Context (Sınırlandırılmış Bağlam)",
-            "Repository"
+            "Repository (Depo)"
         ],
         "a": 2,
         "desc": "Bounded Context, bir veri ve iş modelinin sınırlarını çizer ve doğrudan bağımsız bir domain bileşenine (veya mikroservise) karşılık gelir."
     },
     {
-        "q": "[Sınav Odaklı] Katmanlı Mimari (Layered Architecture) stilinin en belirgin özelliği hangisidir?",
+        "q": "Bileşenlerin granülerliği (size/granularity) belirlenirken aşağıdakilerden hangisi göz önüne alınmalıdır?",
         "options": [
-            "Bileşenlerin dairesel yerleşimidir.",
-            "Bileşenlerin hiyerarşik katmanlar (Presentation, Business, Database) halinde düzenlenmesi ve üst katmanın alt katmanı çağırması.",
-            "Her servisin kendi veritabanının olması.",
-            "Hiçbir katmanın birbiriyle konuşamaması."
+            "Sadece veritabanındaki tablo sayısı.",
+            "Bileşenlerin bağımsız deploy edilme ihtiyacı, veri paylaşım sıklığı ve ağ gecikmesi toleransı.",
+            "Geliştiricilerin kıdem seviyesi.",
+            "Kullanılan framework'ün dosya boyutu limitleri."
         ],
         "a": 1,
-        "desc": "Katmanlı mimari, bileşenleri teknik sorumluluklarına göre yatay katmanlara ayırır."
+        "desc": "Bileşenlerin çok büyük olması monolitik hantallık yaratırken, çok küçük olması ağ trafiğini artırır. Bu denge deploy edilebilirlik ve veri paylaşım sıklığına göre kurulur."
     },
+
+    // Bölüm 7: Mimari Stiller (Katmanlı, Boru Hattı, Eklenti, SOA, Mikroservisler) (80-99)
     {
-        "q": "[Sınav Odaklı] Katmanlı mimaride 'Sinkhole Anti-Pattern' nedir?",
+        "q": "Katmanlı Mimari (Layered Architecture) stilinin en belirgin yapısal özelliği hangisidir?",
         "options": [
-            "Veritabanının çökmesi.",
-            "İsteklerin hiçbir iş mantığı işletilmeden sadece katmanlardan geçip (passthrough) doğrudan veritabanına erişmesi.",
-            "Sonsuz döngülerin oluşması.",
-            "Katmanların sırasının karışması."
+            "Bileşenlerin dairesel olarak yerleştirilmesidir.",
+            "Bileşenlerin yatay hiyerarşik katmanlar (Presentation, Business, Database) halinde düzenlenmesi ve katmanların kapalı (closed) veya açık (open) olması.",
+            "Her servisin mutlaka kendi bağımsız veritabanının bulunması.",
+            "Bileşenlerin sadece olaylar (events) üzerinden asenkron haberleşmesi."
         ],
         "a": 1,
-        "desc": "İsteklerin %80'inden fazlası katmanlarda işlem görmeden doğrudan alt katmana aktarılıyorsa bu bir sinkhole belirtisidir."
+        "desc": "Katmanlı mimari, bileşenleri sorumluluklarına göre yatay katmanlara ayırır. Kapalı katmanlar üstündeki katmanın altındaki katmanı atlamasını engeller."
     },
     {
-        "q": "[Sınav Odaklı] Boru Hattı (Pipeline) mimari stilindeki filtre (filter) bileşenlerinin temel görevi nedir?",
+        "q": "Katmanlı mimaride, bir isteğin hiçbir iş mantığı işletilmeden sadece katmanlardan geçerek doğrudan veritabanına erişmesine ne ad verilir?",
         "options": [
-            "Veritabanı bağlantılarını filtrelemek.",
-            "Gelen veri akışını işlemek, dönüştürmek ve bir sonraki boruya (pipe) aktarmak (bağımsız ve izole).",
-            "Uygulamaya sızmaları engellemek.",
-            "Arayüzü çizmek."
+            "Big Ball of Mud",
+            "Sinkhole Anti-Pattern (Lavabo Deliği Anti-Deseni)",
+            "Circular Dependency",
+            "Liskov Violation"
         ],
         "a": 1,
-        "desc": "Filtreler veri dönüştürücülerdir (data transformers). Pipe'lar ise filtreler arası veri taşıyan kanallardır."
+        "desc": "Sinkhole anti-deseninde istekler katmanlarda işlem görmeden doğrudan alt katmana aktarılır. Bu durum katmanlı yapının getirdiği performansı boş yere tüketir."
     },
     {
-        "q": "[Sınav Odaklı] Eklenti tabanlı (Plug-in / Microkernel) mimari stilinin iki ana bileşeni hangisidir?",
+        "q": "Boru Hattı (Pipeline) mimari stilindeki 'filtre' (filter) bileşenlerinin temel görevi nedir?",
+        "options": [
+            "Veritabanı bağlantı havuzunu sınırlamak.",
+            "Gelen veri akışını bağımsız olarak işlemek, dönüştürmek ve bir sonraki boruya (pipe) aktarmak.",
+            "Kullanıcının sisteme erişim yetkilerini kontrol etmek.",
+            "Arayüzün renk paletini belirlemek."
+        ],
+        "a": 1,
+        "desc": "Filtreler veri dönüştürücülerdir (data transformers) ve birbirlerinden tamamen bağımsız/izole çalışırlar."
+    },
+    {
+        "q": "Eklenti tabanlı (Plug-in / Microkernel) mimari stilinin iki ana bileşeni hangisidir?",
         "options": [
             "Client ve Server",
-            "Core System (Çekirdek) ve Plug-in Modules (Eklentiler)",
-            "Database ve API",
+            "Core System (Çekirdek Sistem) ve Plug-in Modules (Eklenti Modülleri)",
+            "Database ve Cache Layer",
             "Controller ve View"
         ],
         "a": 1,
-        "desc": "Çekirdek sistem temel mantığı çalıştırır, ek özellikler ise çekirdeği bozmadan eklenti olarak sisteme takılır (Örn: IDE'ler, tarayıcılar)."
+        "desc": "Çekirdek sistem temel minimum mantığı çalıştırır, ek özellikler ise çekirdeği bozmadan eklenti olarak sisteme takılıp çıkarılır (Örn: IDE'ler)."
     },
     {
-        "q": "[Sınav Odaklı] Orkestrasyon-Odaklı Servis-Yönelimli Mimari (OD-SOA) modelinde tüm servis çağrılarını yöneten merkezi bileşen hangisidir?",
+        "q": "Orkestrasyon-Odaklı Servis-Yönelimli Mimari (OD-SOA) modelinde tüm servis çağrılarını ve entegrasyonu yöneten merkezi bileşen hangisidir?",
         "options": [
-            "Database",
+            "Relational Database",
             "Orkestrasyon Motoru / ESB (Enterprise Service Bus)",
-            "Sidecar",
+            "Sidecar Proxy",
             "API Gateway"
         ],
         "a": 1,
         "desc": "OD-SOA'da tüm mesaj akışları ve entegrasyon kuralları merkezi bir orkestrasyon motoru (ESB) üzerinden akar."
     },
     {
-        "q": "[Sınav Odaklı] Mikroservis Mimarisi (Microservices) stilinin SOA'dan en temel farkı nedir?",
+        "q": "Mikroservis Mimarisi (Microservices) stilinin SOA'dan en temel farkı aşağıdakilerden hangisidir?",
         "options": [
-            "SOA'nın daha hızlı çalışması.",
-            "Mikroservislerin tam bağımsız dağıtılabilirlik (independent deployability) ve servis başına bağımsız veritabanı (database per service) ilkesini savunması.",
-            "SOA'da sadece XML kullanılması.",
-            "Mikroservislerin monolitik olması."
+            "Mikroservislerin daha yavaş çalışması.",
+            "Tam bağımsız dağıtılabilirlik (independent deployability) ve servis başına bağımsız veritabanı (database per service) ilkelerini savunması.",
+            "Mikroservislerde merkezi bir ESB kullanılması.",
+            "Mikroservislerin monolitik veri yapılarını paylaşması."
         ],
         "a": 1,
         "desc": "Mikroservisler paylaşımlı kaynakları (ESB, ortak veritabanı) reddeder, yüksek bağımsızlık için 'duplication over reuse' ilkesini uygular."
     },
     {
-        "q": "[Sınav Odaklı] Mikroservislerde her servisin kendi veritabanına sahip olmasının en önemli sonucu nedir?",
+        "q": "Mikroservislerde her servisin kendi veritabanına sahip olmasının en önemli mimari sonucu nedir?",
         "options": [
-            "Veritabanı lisans masraflarının sıfırlanması.",
-            "Servislerin veri düzeyinde birbirine bağımlılığının sıfırlanması ve bağımsız deploy edilebilmesi.",
+            "Veritabanı lisans masraflarının azalması.",
+            "Servislerin veri düzeyinde birbirine bağımlılığının (coupling) kırılması ve bağımsız geliştirilip deploy edilebilmesi.",
             "Veri tabanlarının daha yavaş çalışması.",
             "Veri yedeklemenin imkansızlaşması."
         ],
         "a": 1,
-        "desc": "Veritabanlarının ayrılması sıkı bağlılığı (coupling) kırar ve servislerin bağımsız geliştirilmesini sağlar."
+        "desc": "Veritabanlarının ayrılması sıkı bağlılığı (coupling) kırar ve servislerin bağımsız geliştirilmesini ve ölçeklenmesini sağlar."
     },
     {
-        "q": "[Sınav Odaklı] Mikroservis mimarisinde ortak operasyonel işlevleri (loglama, izleme vb.) ana servisin kodunu kirletmeden yanına eklemeyi sağlayan desen hangisidir?",
+        "q": "Mikroservis mimarisinde ortak operasyonel işlevleri (loglama, izleme, güvenlik vb.) ana servisin kodunu kirletmeden yanına eklemeyi sağlayan desen hangisidir?",
         "options": [
             "Mediator Pattern",
             "Sidecar Pattern",
@@ -967,138 +980,138 @@ const questionsList = [
             "Observer Pattern"
         ],
         "a": 1,
-        "desc": "Sidecar deseni, ana konteynerin yanına eklenen yardımcı konteynerlerle altyapı görevlerini yönetir."
+        "desc": "Sidecar deseni, ana konteynerin yanına eklenen yardımcı konteynerlerle altyapı ve ağ görevlerini yönetir."
     },
     {
-        "q": "[Sınav Odaklı] Sidecar'ların oluşturduğu ağ üzerinden servisler arası iletişimi ve trafiği yöneten altyapı katmanına ne ad verilir?",
+        "q": "Sidecar'ların oluşturduğu ağ üzerinden servisler arası iletişimi, yönlendirmeyi ve trafiği yöneten altyapı katmanına ne ad verilir?",
         "options": [
-            "ESB",
-            "Service Mesh",
-            "Orchestrator",
+            "Enterprise Service Bus (ESB)",
+            "Service Mesh (Servis Ağı)",
+            "Message Broker",
             "Load Balancer"
         ],
         "a": 1,
-        "desc": "Service Mesh (örn: Istio), sidecar'lar aracılığıyla servislerin güvenliğini, yönlendirmesini ve izlenebilirliğini yönetir."
+        "desc": "Service Mesh (örn: Istio), sidecar'lar aracılığıyla servislerin güvenliğini, yönlendirmesini ve izlenebilirliğini merkezi yönetir."
     },
     {
-        "q": "[Sınav Odaklı] Orkestrasyon-Odaklı SOA modelinde tek bir ortak servisin (Örn: Customer Service) kullanılmasının yarattığı en büyük tehlike nedir?",
+        "q": "Orkestrasyon-Odaklı SOA modelinde tek bir ortak servisin (Örn: Customer Service) kullanılmasının yarattığı en büyük tehlike nedir?",
         "options": [
             "Performansın aşırı artması.",
-            "Aşırı bağımlılık (tight coupling) sebebiyle küçük bir değişikliğin tüm sistemi etkilemesi (ripple effect) ve koordine deployment zorunluluğu.",
+            "Aşırı bağımlılık (tight coupling) sebebiyle küçük bir değişikliğin tüm sistemi etkilemesi (ripple effect) ve koordine/büyük deployment zorunluluğu.",
             "Veritabanının silinmesi.",
-            "Hiçbir ekinin o servisi kullanamaması."
+            "Ekiplerin o servisi hiç kullanamaması."
         ],
         "a": 1,
         "desc": "Merkezi servis paylaşımı, sistemde 'ripple effect' yaratarak bağımsızlığı yok eder ve güncellemeleri zorlaştırır."
     },
     {
-        "q": "[Sınav Odaklı] Katmanlı Mimari (Layered Architecture) stilinin en belirgin özelliği hangisidir?",
+        "q": "Eklenti tabanlı (Plug-in) mimari tasarımında eklentiler çekirdek sisteme (core) nasıl bağlanır ve veri alışverişi yapar?",
         "options": [
-            "Bileşenlerin dairesel yerleşimidir.",
-            "Bileşenlerin hiyerarşik katmanlar (Presentation, Business, Database) halinde düzenlenmesi ve üst katmanın alt katmanı çağırması.",
-            "Her servisin kendi veritabanının olması.",
-            "Hiçbir katmanın birbiriyle konuşamaması."
+            "Doğrudan veritabanı tabloları üzerinden ortak SQL sorguları yazarak.",
+            "Çekirdek sistem tarafından sunulan ve sınırları belirlenmiş kayıt (registration) arayüzleri ve API'ler vasıtasıyla.",
+            "Ağ üzerinden sürekli REST API çağrıları atarak.",
+            "Eklentiler çekirdek sistemin kaynak kodunu derleme anında doğrudan değiştirerek."
         ],
         "a": 1,
-        "desc": "Katmanlı mimari, bileşenleri teknik sorumluluklarına göre yatay katmanlara ayırır."
+        "desc": "Eklentiler, çekirdek sistemin tanımladığı arayüzleri implement ederek veya çekirdek API'lerini kullanarak sisteme bağlanır."
     },
     {
-        "q": "[Sınav Odaklı] Katmanlı mimaride 'Sinkhole Anti-Pattern' nedir?",
+        "q": "Boru Hattı (Pipeline / Pipes and Filters) mimari stilinde boruların (pipes) temel görevi hangisidir?",
         "options": [
-            "Veritabanının çökmesi.",
-            "İsteklerin hiçbir iş mantığı işletilmeden sadece katmanlardan geçip (passthrough) doğrudan veritabanına erişmesi.",
-            "Sonsuz döngülerin oluşması.",
-            "Katmanların sırasının karışması."
+            "Veriyi işlemek ve dönüştürmek.",
+            "Filtreler arasında veri akışını tek yönlü olarak taşımak (iletişim kanalı).",
+            "Kullanıcı isteklerini karşılayan arayüzleri sunmak.",
+            "Veritabanı tablolarını birbirine bağlamak."
         ],
         "a": 1,
-        "desc": "İsteklerin %80'inden fazlası katmanlarda işlem görmeden doğrudan alt katmana aktarılıyorsa bu bir sinkhole belirtisidir."
+        "desc": "Pipe'lar veri üzerinde işlem yapmaz, sadece filtreler arası tek yönlü veri taşıyan kanallardır."
     },
     {
-        "q": "[Sınav Odaklı] Boru Hattı (Pipeline) mimari stilindeki filtre (filter) bileşenlerinin temel görevi nedir?",
+        "q": "Alan Tabanlı Mimari (Space-Based Architecture) hangi temel problemi çözmek için tasarlanmıştır?",
         "options": [
-            "Veritabanı bağlantılarını filtrelemek.",
-            "Gelen veri akışını işlemek, dönüştürmek ve bir sonraki boruya (pipe) aktarmak (bağımsız ve izole).",
-            "Uygulamaya sızmaları engellemek.",
-            "Arayüzü çizmek."
+            "Kodun test edilebilirliğini artırmak.",
+            "Veritabanındaki tıkanıklıkları (database bottleneck) önlemek ve yüksek eşzamanlı istekleri RAM (bellek) içi veri ızgaralarıyla (data grids) karşılamak.",
+            "Arayüz yükleme sürelerini optimize etmek.",
+            "Mikroservislerin boyutunu küçültmek."
         ],
         "a": 1,
-        "desc": "Filtreler veri dönüştürücülerdir (data transformers). Pipe'lar ise filtreler arası veri taşıyan kanallardır."
+        "desc": "Space-Based mimari, merkezi veritabanı darboğazını aşmak için veriyi bellek içi (In-Memory Data Grid) üzerinde replike ederek çalışır."
     },
     {
-        "q": "[Sınav Odaklı] Eklenti tabanlı (Plug-in / Microkernel) mimari stilinin iki ana bileşeni hangisidir?",
+        "q": "Olay Tabanlı Mimari (Event-Driven Architecture) stilinde olayların asenkron işlenmesinin en büyük faydası nedir?",
         "options": [
-            "Client ve Server",
-            "Core System (Çekirdek) ve Plug-in Modules (Eklentiler)",
-            "Database ve API",
-            "Controller ve View"
+            "Hata ayıklamanın (debugging) çok kolaylaşması.",
+            "Yüksek ölçeklenebilirlik, esneklik ve servislerin çalışma zamanında birbirini beklemeden (non-blocking) çalışabilmesi.",
+            "Veri tabanının tutarlılığını (ACID) anlık garanti etmesi.",
+            "Uygulamanın RAM tüketimini tamamen sıfırlaması."
         ],
         "a": 1,
-        "desc": "Çekirdek sistem temel mantığı çalıştırır, ek özellikler ise çekirdeği bozmadan eklenti olarak sisteme takılır (Örn: IDE'ler, tarayıcılar)."
+        "desc": "Asenkron olay işleme, servislerin yanıt vermesini beklemeden iş akışının sürmesini sağlar (gevşek bağlılık)."
     },
     {
-        "q": "[Sınav Odaklı] Orkestrasyon-Odaklı Servis-Yönelimli Mimari (OD-SOA) modelinde tüm servis çağrılarını yöneten merkezi bileşen hangisidir?",
+        "q": "Katmanlı mimaride bir katmanın sadece altındaki katmana erişebilmesini zorunlu kılan kurala ne ad verilir?",
         "options": [
-            "Database",
-            "Orkestrasyon Motoru / ESB (Enterprise Service Bus)",
-            "Sidecar",
-            "API Gateway"
+            "Açık Katman (Open Layer)",
+            "Kapalı Katman (Closed Layer)",
+            "İzole Katman",
+            "Kısıtlı Katman"
         ],
         "a": 1,
-        "desc": "OD-SOA'da tüm mesaj akışları ve entegrasyon kuralları merkezi bir orkestrasyon motoru (ESB) üzerinden akar."
+        "desc": "Kapalı Katman (Closed Layer) kuralı, isteklerin aradaki katmanları atlamasını engelleyerek katmanlar arası bağımlılığın kontrol edilmesini sağlar."
     },
     {
-        "q": "[Sınav Odaklı] Mikroservis Mimarisi (Microservices) stilinin SOA'dan en temel farkı nedir?",
+        "q": "Mikroservis mimarisinde 'Veri Çoğaltma' (Data Duplication / Denormalization) neden bir tercih sebebi olabilir?",
         "options": [
-            "SOA'nın daha hızlı çalışması.",
-            "Mikroservislerin tam bağımsız dağıtılabilirlik (independent deployability) ve servis başına bağımsız veritabanı (database per service) ilkesini savunması.",
-            "SOA'da sadece XML kullanılması.",
-            "Mikroservislerin monolitik olması."
+            "Daha fazla disk alanı doldurarak sunucu kapasitesini test etmek için.",
+            "Servislerin veri okuma işlemlerinde diğer servislere olan ağ bağımlılığını (coupling) kırıp bağımsız çalışabilmelerini sağlamak için.",
+            "Veritabanı yedekleme işlemlerini otomatikleştirmek için.",
+            "SQL sorgularını daha karmaşık hale getirmek için."
         ],
         "a": 1,
-        "desc": "Mikroservisler paylaşımlı kaynakları (ESB, ortak veritabanı) reddeder, yüksek bağımsızlık için 'duplication over reuse' ilkesini uygular."
+        "desc": "Mikroservisler yüksek otonomi için paylaşımlı veri tabanları yerine veri kopyalamayı (duplication over reuse) tercih ederler."
     },
     {
-        "q": "[Sınav Odaklı] Mikroservislerde her servisin kendi veritabanına sahip olmasının en önemli sonucu nedir?",
+        "q": "Eklenti tabanlı (Plug-in) mimaride çekirdeğin (core) eklentilerdeki bir hatadan etkilenip çökmesini önlemek için uygulanan yöntem hangisidir?",
         "options": [
-            "Veritabanı lisans masraflarının sıfırlanması.",
-            "Servislerin veri düzeyinde birbirine bağımlılığının sıfırlanması ve bağımsız deploy edilebilmesi.",
-            "Veri tabanlarının daha yavaş çalışması.",
-            "Veri yedeklemenin imkansızlaşması."
+            "Eklentileri tamamen statik sınıflarla yazmak.",
+            "Eklentileri ana işlemden (process) izole ederek ayrı iş parçacıklarında veya konteynerlerde çalıştırmak.",
+            "Eklentilerin RAM kullanımını işletim sistemi düzeyinde tamamen kapatmak.",
+            "Eklenti yazımını yasaklamak."
         ],
         "a": 1,
-        "desc": "Veritabanlarının ayrılması sıkı bağlılığı (coupling) kırar ve servislerin bağımsız geliştirilmesini sağlar."
+        "desc": "İzolasyon, eklentilerin çekirdek sistemi (core) kilitlemesini veya çökertmesini önlemek için uygulanan güvenlik ve kararlılık yönetimidir."
     },
     {
-        "q": "[Sınav Odaklı] Mikroservis mimarisinde ortak operasyonel işlevleri (loglama, izleme vb.) ana servisin kodunu kirletmeden yanına eklemeyi sağlayan desen hangisidir?",
+        "q": "Alan Tabanlı Mimari (Space-Based) stilinin en büyük dezavantajı aşağıdakilerden hangisidir?",
         "options": [
-            "Mediator Pattern",
-            "Sidecar Pattern",
-            "Factory Pattern",
-            "Observer Pattern"
+            "Performansının çok düşük olması.",
+            "Veri tutarlılığını (eventual consistency) yönetmenin zorluğu ve bellek içi veri replikasyonunun getirdiği karmaşıklık.",
+            "Bulut sunucularda çalıştırılamaması.",
+            "Kullanıcı arayüzü entegrasyonunun imkansız olması."
         ],
         "a": 1,
-        "desc": "Sidecar deseni, ana konteynerin yanına eklenen yardımcı konteynerlerle altyapı görevlerini yönetir."
+        "desc": "Space-based mimaride veriler RAM'de tutulduğundan ve asenkron veritabanına yazıldığından, veri tutarlılığını sağlamak ve çökme anında veri kaybını önlemek zordur."
     },
     {
-        "q": "[Sınav Odaklı] Sidecar'ların oluşturduğu ağ üzerinden servisler arası iletişimi ve trafiği yöneten altyapı katmanına ne ad verilir?",
+        "q": "Olay tabanlı mimaride olay kuyruğu (event queue) ile olay kanalı (event channel) arasındaki fark nedir?",
         "options": [
-            "ESB",
-            "Service Mesh",
-            "Orchestrator",
-            "Load Balancer"
+            "Kuyruk veriyi kalıcı saklar, kanal ise veriyi siler.",
+            "Kuyruk gelen olayları sıraya alır (input), kanal ise olayları abonelere dağıtır (router/broker).",
+            "Kuyruk sadece Java'da vardır, kanal ise her dilde kullanılabilir.",
+            "İkisi arasında hiçbir mimari fark yoktur."
         ],
         "a": 1,
-        "desc": "Service Mesh (örn: Istio), sidecar'lar aracılığıyla servislerin güvenliğini, yönlendirmesini ve izlenebilirliğini yönetir."
+        "desc": "Olay kuyruğu istekleri toplar (Örn: Ingestion), olay kanalı ise bu olayları doğru abonelere/tüketicilere iletir (Örn: Event Broker)."
     },
     {
-        "q": "[Sınav Odaklı] Orkestrasyon-Odaklı SOA modelinde tek bir ortak servisin (Örn: Customer Service) kullanılmasının yarattığı en büyük tehlike nedir?",
+        "q": "Mikroservis mimarisine geçiş kararında rol oynayan en önemli itici güç hangisi olmalıdır?",
         "options": [
-            "Performansın aşırı artması.",
-            "Aşırı bağımlılık (tight coupling) sebebiyle küçük bir değişikliğin tüm sistemi etkilemesi (ripple effect) ve koordine deployment zorunluluğu.",
-            "Veritabanının silinmesi.",
-            "Hiçbir ekinin o servisi kullanamaması."
+            "Geliştirici ekibin sadece en son teknolojileri denemek istemesi.",
+            "Uygulamanın farklı iş alanlarının (domain) bağımsız hızlarda büyümesi, bağımsız dağıtım (deployment) ve farklı ekiplerin otonom çalışma ihtiyacı.",
+            "Tüm kod tabanını tek bir büyük dosyada toplama isteği.",
+            "Veritabanı lisans maliyetlerini azaltmak."
         ],
         "a": 1,
-        "desc": "Merkezi servis paylaşımı, sistemde 'ripple effect' yaratarak bağımsızlığı yok eder ve güncellemeleri zorlaştırır."
+        "desc": "Mikroservisler teknik bir heves değil; bağımsız deploy edilebilirlik, ölçeklenebilirlik ve ekip otonomisi (organizasyonel hız) ihtiyacı için seçilmelidir."
     }
 ];

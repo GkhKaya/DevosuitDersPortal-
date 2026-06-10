@@ -1,18 +1,16 @@
 /**
- * Devosuit — Yazılım Mimarisi ve Tasarımı Ders Modülü
+ * Devosuit — Yapay Zekaya Giriş Ders Modülü
  * Sidebar navigasyon, arama, tema, quiz başlatma.
  */
 'use strict';
 
 const SECTION_ORDER = [
-    'derse-giris',
-    'mimari-dusunme',
-    'modulerlik',
-    'mimari-karakteristikler',
-    'olcmeyi-yonetme',
-    'bilesen-tabanli',
-    'mimari-stiller',
-    'klasik-sorular',
+    'yapay-zekaya-giris',
+    'arama-algoritmalari',
+    'makine-ogrenmesi',
+    'ysa',
+    'bulanik-ga',
+    'derin-ogrenme',
     'exam-simulator',
 ];
 
@@ -130,7 +128,6 @@ function showAlert(title, message, iconClass = 'fa-info-circle') {
     overlay.classList.add('show');
 }
 
-// Global scope closeAlert
 window.closeAlert = function() {
     document.getElementById('alertOverlay').classList.remove('show');
 }

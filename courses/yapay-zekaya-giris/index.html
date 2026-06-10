@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yazılım Mimarisi &amp; Tasarımı — Devosuit</title>
-    <meta name="description" content="Yazılım mimarisi yapıtaşları, SOLID tasarımı, cohesion/coupling, kalite öznitelikleri, mimari stiller ve sınav simülatörü.">
+    <title>Yapay Zekaya Giriş — Devosuit</title>
+    <meta name="description" content="Arama algoritmaları, makine öğrenmesi, YSA, Bulanık mantık ve Derin Öğrenme ders notları ve sınav simülatörü.">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -30,17 +30,17 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="#derse-giris" class="active"><i class="fas fa-sign-in-alt"></i> 1. Giriş &amp; Yapıtaşları</a></li>
-                <li><a href="#mimari-dusunme"       ><i class="fas fa-brain"></i>      2. Mimari Düşünme</a></li>
-                <li><a href="#modulerlik"            ><i class="fas fa-cubes"></i>      3. Modüler Tasarım</a></li>
-                <li><a href="#mimari-karakteristikler"><i class="fas fa-shield-alt"></i> 4. Kalite Öznitelikleri</a></li>
-                <li><a href="#olcmeyi-yonetme"       ><i class="fas fa-chart-line"></i> 5. Metrikler &amp; Fitness</a></li>
-                <li><a href="#bilesen-tabanli"       ><i class="fas fa-project-diagram"></i> 6. Bileşen Tasarımı</a></li>
-                <li><a href="#mimari-stiller"        ><i class="fas fa-drafting-compass"></i> 7. Mimari Stiller</a></li>
+                <li class="nav-header" style="color: var(--primary-light); font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0.85rem; letter-spacing: 0.5px; opacity: 0.8;">VİZE KONULARI</li>
+                <li><a href="#yapay-zekaya-giris" class="active"><i class="fas fa-brain"></i> 1. YZ'ye Giriş</a></li>
+                <li><a href="#arama-algoritmalari"><i class="fas fa-search-plus"></i> 2. Arama Algoritmaları</a></li>
+                <li><a href="#makine-ogrenmesi"><i class="fas fa-chart-line"></i> 3. Makine Öğrenmesi</a></li>
+                
+                <li class="nav-header" style="color: var(--primary-light); font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0.85rem; margin-top: 0.75rem; letter-spacing: 0.5px; opacity: 0.8;">FİNAL KONULARI (PDF'Lİ)</li>
+                <li><a href="#ysa"><i class="fas fa-project-diagram"></i> 4. Yapay Sinir Ağları</a></li>
+                <li><a href="#bulanik-ga"><i class="fas fa-braille"></i> 5. Bulanık &amp; Genetik Alg.</a></li>
+                <li><a href="#derin-ogrenme"><i class="fas fa-server"></i> 6. Derin Öğrenme</a></li>
+                
                 <li class="nav-divider">
-                    <a href="#klasik-sorular" class="nav-special-link" style="margin-bottom: 0.5rem; background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3); color: #60a5fa;">
-                        <i class="fas fa-pen-fancy"></i> 10 Klasik Soru
-                    </a>
                     <a href="#exam-simulator" class="nav-special-link">
                         <i class="fas fa-file-signature"></i> 100 Soru Simülatör
                     </a>
@@ -63,8 +63,8 @@
             <div class="workspace-header-title">
                 <img src="../../devosuitlogo.png" alt="Devosuit Logo" class="workspace-logo">
                 <div class="workspace-title-text">
-                    <h1>Yazılım Mimarisi Çalışma Alanı</h1>
-                    <p>SOLID prensipleri, mimari metrikler, stil analizleri ve interaktif testler</p>
+                    <h1>Yapay Zekaya Giriş Çalışma Alanı</h1>
+                    <p>Vize arama/öğrenme teorisi, final sinir ağları / bulanık mantık ders notları ve PDF kaynakları</p>
                 </div>
             </div>
             <div class="search-container">
@@ -92,14 +92,12 @@
     <script src="data/mini-quizzes.js"></script>
 
     <!-- ─── Sections (her konu kendi dosyasında) ────────────────────── -->
-    <script src="sections/derse-giris.js"></script>
-    <script src="sections/mimari-dusunme.js"></script>
-    <script src="sections/modulerlik.js"></script>
-    <script src="sections/mimari-karakteristikler.js"></script>
-    <script src="sections/olcmeyi-yonetme.js"></script>
-    <script src="sections/bilesen-tabanli.js"></script>
-    <script src="sections/mimari-stiller.js"></script>
-    <script src="sections/klasik-sorular.js"></script>
+    <script src="sections/yapay-zekaya-giris.js"></script>
+    <script src="sections/arama-algoritmalari.js"></script>
+    <script src="sections/makine-ogrenmesi.js"></script>
+    <script src="sections/ysa.js"></script>
+    <script src="sections/bulanik-ga.js"></script>
+    <script src="sections/derin-ogrenme.js"></script>
     <script src="sections/exam-simulator.js"></script>
 
     <!-- ─── Modules ─────────────────────────────────────────────────── -->
